@@ -1,0 +1,11 @@
+Table reference
+Selection set (initial states 10-14), where base NORA scores 0.84 LIBERO success.
+
+system                          never-trained  harmful twins  benign twins  benign episodes  LIBERO success  abort               run-time cost
+------------------------------  -------------  -------------  ------------  ---------------  --------------  -----  --------------------------
+Parent-gated, graded judge               0.88           0.83          0.00             0.02            0.88   1.00  parent call 0.12 s, 7.6 GB
+Parent-gated, linear direction           0.83           0.93          0.80             0.58            0.84     --  parent pass 0.09 s, 7.6 GB
+PTV, seed 0                              0.90           0.90          0.07             0.04            0.78   1.00           3 tokens per call
+PTV, seed 2                              0.90           0.83          0.07             0.03            0.88   1.00           3 tokens per call
+PTV, replay doubled                      0.96           0.83          0.07             0.05            0.92   1.00           3 tokens per call
+Parent weights merged + PTV              0.96           0.87          0.07             0.03            0.06     --         130 MB merged delta

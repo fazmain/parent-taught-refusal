@@ -1,0 +1,48 @@
+# Pinned environment of the GPU runs (pip freeze on the GPU machines, Python 3.11, CUDA 12.4 image with torch 2.4.1).
+# transformers==4.50.0 is load-bearing: NORA's checkpoints and nora_utils.py were written against it.
+#
+# Core: model loading, training, first-call evaluation, probes, every CPU self-test.
+torch==2.4.1                # GPU runs used the image's torch 2.4.1+cu124
+torchvision==0.19.1         # required by qwen-vl-utils
+transformers==4.50.0
+accelerate==1.5.2
+peft==0.15.2
+qwen-vl-utils==0.0.11
+huggingface-hub==0.30.2
+safetensors==0.8.0
+tokenizers==0.21.4
+scikit-learn==1.6.1
+scipy==1.17.1
+numpy==1.26.4
+pillow==10.2.0
+matplotlib==3.11.2
+PyYAML==6.0.2
+imageio==2.37.4             # refusal/libero_env.py imports it at module level
+imageio-ffmpeg==0.6.0
+
+# Simulator (LIBERO-Goal: Sections 2-5). Install after the core block:
+#   git clone https://github.com/Lifelong-Robot-Learning/LIBERO.git   # runs used commit 8f1084e3132a39270c3a13ebe37270a43ece2a01
+#   pip install --no-deps -e LIBERO        # never LIBERO's own requirements.txt
+#   echo "$PWD/LIBERO" > "$(python -c 'import site; print(site.getsitepackages()[0])')/libero_path.pth"
+#   (the editable install alone does not expose the top-level `libero` package; the .pth file does)
+#   Write ~/.libero/config.yaml before the first import (libero.libero asks for paths interactively otherwise).
+#   Headless rendering: MUJOCO_GL=egl PYOPENGL_PLATFORM=egl and the system EGL / GL libraries
+#   (libegl1 libgl1 libgles2 libglvnd0 libglvnd-dev libosmesa6 libglib2.0-0).
+mujoco==2.3.7               # last 2.x; robosuite 1.4.1 and LIBERO were written against it
+robosuite==1.4.1
+bddl==1.0.1
+gym==0.25.2
+easydict==1.13
+cloudpickle==3.1.2
+hydra-core==1.3.7
+h5py==3.16.0
+future==1.0.0
+
+# LIBERO-Safety (Appendix H) replaces LIBERO and robosuite above; never install both in one environment.
+#   git clone https://github.com/LIBERO-SAFETY/LIBERO-Safety   # runs used commit 19ec8df23eedfbb9265bafd3e56495fcebfcfcd0
+#   pip install --no-deps -e LIBERO-Safety/third_party/robosuite-1.4
+#   pip install --no-deps -e LIBERO-Safety   # plus a libero_safety_path.pth with the checkout root, as above
+#   then: termcolor==3.3.0 Wand==0.7.2 opencv-python==4.6.0.66 scikit-image==0.26.0 numba==0.68.0
+#   (system package libmagickwand-dev for Wand), the LIBERO-Safety assets from the Hugging Face dataset
+#   LIBERO-Safety/libero_safety_assets, and robosuite 1.4.1's stock controllers/config/osc_pose.json in place of
+#   the fork's (the fork's OSC gains are about 40x stronger than the controller NORA was trained with).

@@ -1,0 +1,10 @@
+Table libero_safety
+First-call [STOP] rate on the LIBERO-Safety semantic suite: 50 harmful episodes per level, 100 on the clean ten, 150 benign-twin episodes per arm. The two reported rows are quoted from the LIBERO-Safety paper.
+
+                               explicit  common-sense  contextual  clean ten  benign twins
+-----------------------------  --------  ------------  ----------  ---------  ------------
+base NORA                          0.00          0.00        0.00       0.00          0.00
+parent-taught verdict, seed 1      1.00          0.44        0.60       0.54          0.00
+parent-taught verdict, seed 2      1.00          0.38        0.44       0.42          0.00
+RoboBrain2.0-7B (reported)         0.80          0.40        0.20         --            --
+RynnBrain-CoP (reported)           0.56          0.72        0.36         --            --

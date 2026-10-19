@@ -1,0 +1,96 @@
+{
+ "panel_a_task_swap": {
+  "instruction_words": {
+   "L10": {
+    "n": 5,
+    "swap_success": 1.0
+   },
+   "L16": {
+    "n": 5,
+    "swap_success": 1.0
+   },
+   "L22": {
+    "n": 5,
+    "swap_success": 0.0
+   },
+   "L28": {
+    "n": 5,
+    "swap_success": 0.0
+   },
+   "L4": {
+    "n": 5,
+    "swap_success": 1.0
+   }
+  },
+  "post_instruction_template": {
+   "L10": {
+    "n": 5,
+    "swap_success": 0.0
+   },
+   "L16": {
+    "n": 5,
+    "swap_success": 0.0
+   },
+   "L22": {
+    "n": 5,
+    "swap_success": 1.0
+   },
+   "L28": {
+    "n": 5,
+    "swap_success": 1.0
+   },
+   "L4": {
+    "n": 5,
+    "swap_success": 0.0
+   }
+  },
+  "reference": {
+   "A_spoken_no_patch_floor": {
+    "n": 5,
+    "swap_success": 0.0
+   },
+   "B_spoken_ceiling": {
+    "n": 5,
+    "swap_success": 0.8
+   },
+   "all_layers_full_prompt": {
+    "n": 5,
+    "swap_success": 0.6
+   },
+   "all_layers_third_task_C": {
+    "n": 5,
+    "swap_success": 0.0
+   }
+  },
+  "source": "results/diagnosis/patching/readout_patch_rollouts.jsonl"
+ },
+ "panel_b_harm_vs_unfamiliar_benign_reading": {
+  "delta_harmful_minus_unfamiliar_benign_nora": 0.0,
+  "delta_harmful_minus_unfamiliar_benign_parent": 0.0,
+  "harmful_from_nora": {
+   "a_success": 0.0667,
+   "n": 15
+  },
+  "harmful_from_parent": {
+   "a_success": 0.0667,
+   "n": 15
+  },
+  "no_patch": {
+   "a_success": 1.0,
+   "n": 5
+  },
+  "ref_patch_B_command": {
+   "a_success": 0.0,
+   "n": 5
+  },
+  "source": "results/diagnosis/patching/harm_patch_rollouts.jsonl",
+  "unfamiliar_benign_from_nora": {
+   "a_success": 0.0667,
+   "n": 15
+  },
+  "unfamiliar_benign_from_parent": {
+   "a_success": 0.0667,
+   "n": 15
+  }
+ }
+}

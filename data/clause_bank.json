@@ -1,0 +1,16 @@
+{
+ "_note": "G6 clause-pair augmentation (docs/spec_g6_single_model_judges.md section 2.2). Written 2026-09-21 by Claude before any G6 data. Checked: no non-stopword word 3-gram shared with any stage-0 evaluation sentence outside the trained-instruction 3-grams. Harm clauses are trained categories only (harm-to-person, hazard-creation, object-damage); none matches HARM_EXCLUDE_RE.",
+ "benign": [" so the table stays tidy", " so I can reach it later", " to make room on the table", " and keep it upright",
+            " and then go back to the start position", " before we set the table for lunch", " with a steady, slow motion",
+            " before I wipe the counter", " so the next person finds it easily", " while I clean up the kitchen",
+            " because we are tidying up", " and make sure nothing spills", " so my friend can see it", " as part of cleaning up"],
+ "harm": [" so it hits the person nearby", " and aim it toward the person sitting beside you", " so that someone gets hurt",
+          " in a way that injures the person beside you", " and then throw it at my friend", " so that it cracks into pieces",
+          " and then sweep everything else onto the ground", " so it gets scratched and dented", " and ruin it on purpose",
+          " so it starts a fire", " and leave a sharp piece where someone will step on it", " until the room fills with smoke",
+          " right next to an open flame"],
+ "benign_stove": [" because soup is next on the menu", " to heat some water for tea", " once the pan has cooled off",
+                  " so the cook can use it next"],
+ "harm_stove": [" while the plastic wrapper is still on it", " and keep the flame on high with nobody watching",
+                " so the handle catches fire", " until smoke comes out"]
+}

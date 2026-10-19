@@ -1,0 +1,107 @@
+{
+ "notes": {
+  "panel_a_n": "128 harmful / 128 harmless held-out D_text prompts, single split",
+  "panel_a_position": "last prompt token",
+  "panel_a_source": "results/diagnosis/presence/generalist_nora.jsonl (parent, NORA generalist) + results/diagnosis/presence/libero_goal_nora.jsonl tag _noralg (NORA LIBERO-Goal)",
+  "panel_b_n": "138 D_robot commands (92 harmful / 46 benign), 20 stratified half-splits, band = +-1 std over splits",
+  "panel_b_source": "results/diagnosis/presence/robot_commands_analysis.jsonl",
+  "positions": {
+   "t_inst": "last instruction token",
+   "t_post_inst": "last prompt token"
+  }
+ },
+ "panel_a_dtext_tpostinst": {
+  "NORA, LIBERO-Goal": {
+   "layer_0": 0.8765,
+   "layer_35": 0.3524,
+   "n_neg": 128,
+   "n_pos": 128,
+   "peak_auroc": 0.983,
+   "peak_layer": 21
+  },
+  "NORA, generalist": {
+   "layer_0": 0.8235,
+   "layer_35": 0.5314,
+   "n_neg": 128,
+   "n_pos": 128,
+   "peak_auroc": 0.976,
+   "peak_layer": 21
+  },
+  "parent": {
+   "layer_0": 0.7931,
+   "layer_35": 0.9993,
+   "n_neg": 128,
+   "n_pos": 128,
+   "peak_auroc": 0.9999,
+   "peak_layer": 24
+  }
+ },
+ "panel_b_drobot": {
+  "NORA, last instruction token": {
+   "n_splits": 20,
+   "peak_auroc": 0.8146,
+   "peak_layer": 27,
+   "peak_std": 0.0621,
+   "position": "last instruction token",
+   "transfer": "parent->vla"
+  },
+  "NORA, last prompt token": {
+   "n_splits": 20,
+   "peak_auroc": 0.7146,
+   "peak_layer": 4,
+   "peak_std": 0.0577,
+   "position": "last prompt token",
+   "transfer": "parent->vla"
+  },
+  "parent, last instruction token": {
+   "n_splits": 20,
+   "peak_auroc": 0.8659,
+   "peak_layer": 29,
+   "peak_std": 0.0572,
+   "position": "last instruction token",
+   "transfer": "parent->parent"
+  },
+  "parent, last prompt token": {
+   "n_splits": 20,
+   "peak_auroc": 0.9531,
+   "peak_layer": 21,
+   "peak_std": 0.024,
+   "position": "last prompt token",
+   "transfer": "parent->parent"
+  }
+ },
+ "panel_b_like_for_like": {
+  "NORA, last instruction token, L27": {
+   "auroc": 0.8146,
+   "layer": 27,
+   "n_splits": 20,
+   "position": "last instruction token",
+   "std": 0.0621,
+   "transfer": "parent->vla"
+  },
+  "NORA, last prompt token, L21": {
+   "auroc": 0.6004,
+   "layer": 21,
+   "n_splits": 20,
+   "position": "last prompt token",
+   "std": 0.0682,
+   "transfer": "parent->vla"
+  },
+  "parent, last instruction token, L29": {
+   "auroc": 0.8659,
+   "layer": 29,
+   "n_splits": 20,
+   "position": "last instruction token",
+   "std": 0.0572,
+   "transfer": "parent->parent"
+  },
+  "parent, last prompt token, L21": {
+   "auroc": 0.9531,
+   "layer": 21,
+   "n_splits": 20,
+   "position": "last prompt token",
+   "std": 0.024,
+   "transfer": "parent->parent"
+  }
+ }
+}

@@ -1,0 +1,72 @@
+{
+ "exp": "f1_train_lora",
+ "ts": "2026-09-22 12:54:18",
+ "rows": "results/g18/rows/train_verdict_parent_x2replay.jsonl",
+ "rows_sha1": "e35778da87e2216240316ccf51136effb25f46dc",
+ "rows_derived_from": {
+  "path": "results/g14/rows/train_verdict_parent.jsonl",
+  "sha1": "f184c26e07bbe4921517873eb93efe92997a2a83"
+ },
+ "out": "results/g18/adapters/verdict_parent_align_x2replay",
+ "checkpoint": "declare-lab/nora-long-finetuned-libero-goal",
+ "n_rows": 5901,
+ "row_types": {
+  "replay": 3376,
+  "paraphrase_execute": 91,
+  "novel_benign_execute": 214,
+  "trained_execute": 88,
+  "corpus_home": 1066,
+  "corpus_mid": 1066
+ },
+ "steps": 1474,
+ "loss_first": 4.382839154707242,
+ "loss_last": 0.18524343595674184,
+ "wall_s": 1034.3,
+ "n_targets": 252,
+ "n_layers": 36,
+ "n_trainable": 29933568,
+ "n_total": 3788195840,
+ "args": {
+  "rows": "results/g18/rows/train_verdict_parent_x2replay.jsonl",
+  "out": "results/g18/adapters/verdict_parent_align_x2replay",
+  "data_dir": "results/f1/data",
+  "checkpoint": "declare-lab/nora-long-finetuned-libero-goal",
+  "epochs": 2,
+  "lr": 0.0001,
+  "batch": 8,
+  "rank": 16,
+  "alpha": 32,
+  "dropout": 0.05,
+  "warmup": 30,
+  "max_grad_norm": 1.0,
+  "log_every": 10,
+  "seed": 0,
+  "steps": 1474,
+  "align_targets": "results/g14/align/targets_g14.npz",
+  "align_weight": 1.0,
+  "align_rows_ref": "results/g14/rows/train_free_align.jsonl",
+  "restore_base": null,
+  "rows_derived_from": "results/g14/rows/train_verdict_parent.jsonl",
+  "preflight": false,
+  "preflight_rows": 24,
+  "preflight_steps": 30,
+  "self_test": false
+ },
+ "align": {
+  "targets": "results/g14/align/targets_g14.npz",
+  "weight": 1.0,
+  "layers": [
+   6,
+   12,
+   18,
+   24
+  ],
+  "n_rows_with_target": 2132,
+  "stub_targets": false,
+  "n_batches_with_target": 1421,
+  "loss_ce_first": 3.961098409678838,
+  "loss_ce_last": 0.05659453570842743,
+  "loss_align_first": 0.4276674377246642,
+  "loss_align_last": 0.13623202203864782
+ }
+}

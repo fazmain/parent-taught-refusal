@@ -1,0 +1,135 @@
+
+[I0] 4213 rows
+  ('corpus_home', 'exec', 'home', 'open', 'base_generation')                                    568
+  ('corpus_home', 'hold', 'home', 'open', 'hold_chunk')                                         498
+  ('corpus_mid', 'exec', 'replay_mid', 'closed', 'base_generation')                             304
+  ('corpus_mid', 'exec', 'replay_mid', 'open', 'base_generation')                               264
+  ('corpus_mid', 'hold', 'replay_mid', 'closed', 'hold_chunk')                                  271
+  ('corpus_mid', 'hold', 'replay_mid', 'open', 'hold_chunk')                                    227
+  ('novel_benign_execute', 'exec', 'home', 'open', 'pod8b_free300')                             137
+  ('novel_benign_execute', 'exec', 'replay_mid', 'closed', 'pod8b_free300')                      26
+  ('novel_benign_execute', 'exec', 'replay_mid', 'open', 'pod8b_free300')                        51
+  ('paraphrase_execute', 'exec', 'replay_mid', 'closed', 'pod8b_free300')                        44
+  ('paraphrase_execute', 'exec', 'replay_mid', 'open', 'pod8b_free300')                          47
+  ('replay', 'exec', 'replay_mid', 'closed', 'pod8b_free300')                                   601
+  ('replay', 'exec', 'replay_mid', 'open', 'pod8b_free300')                                    1087
+  ('trained_execute', 'exec', 'home', 'open', 'pod8b_free300')                                   88
+
+[I1] 4213 rows
+  ('corpus_home', 'exec', 'home', 'open', 'base_generation')                                    568
+  ('corpus_home', 'hold', 'home', 'open', 'hold_chunk')                                         498
+  ('corpus_mid', 'exec', 'replay_mid', 'closed', 'base_generation')                             304
+  ('corpus_mid', 'exec', 'replay_mid', 'open', 'base_generation')                               264
+  ('corpus_mid', 'hold', 'replay_mid', 'closed', 'hold_chunk')                                  271
+  ('corpus_mid', 'hold', 'replay_mid', 'open', 'hold_chunk')                                    227
+  ('novel_benign_execute', 'exec', 'home', 'open', 'pod8b_free300')                             137
+  ('novel_benign_execute', 'exec', 'replay_mid', 'closed', 'pod8b_free300')                      26
+  ('novel_benign_execute', 'exec', 'replay_mid', 'open', 'pod8b_free300')                        51
+  ('paraphrase_execute', 'exec', 'replay_mid', 'closed', 'pod8b_free300')                        44
+  ('paraphrase_execute', 'exec', 'replay_mid', 'open', 'pod8b_free300')                          47
+  ('replay', 'exec', 'replay_mid', 'closed', 'pod8b_free300')                                   601
+  ('replay', 'exec', 'replay_mid', 'open', 'pod8b_free300')                                    1087
+  ('trained_execute', 'exec', 'home', 'open', 'pod8b_free300')                                   88
+
+[I2] 4213 rows
+  ('corpus_home', 'exec', 'home', 'open', 'base_generation')                                    660
+  ('corpus_home', 'hold', 'home', 'open', 'hold_chunk')                                         406
+  ('corpus_mid', 'exec', 'replay_mid', 'closed', 'base_generation')                             356
+  ('corpus_mid', 'exec', 'replay_mid', 'open', 'base_generation')                               304
+  ('corpus_mid', 'hold', 'replay_mid', 'closed', 'hold_chunk')                                  219
+  ('corpus_mid', 'hold', 'replay_mid', 'open', 'hold_chunk')                                    187
+  ('novel_benign_execute', 'exec', 'home', 'open', 'pod8b_free300')                             137
+  ('novel_benign_execute', 'exec', 'replay_mid', 'closed', 'pod8b_free300')                      26
+  ('novel_benign_execute', 'exec', 'replay_mid', 'open', 'pod8b_free300')                        51
+  ('paraphrase_execute', 'exec', 'replay_mid', 'closed', 'pod8b_free300')                        44
+  ('paraphrase_execute', 'exec', 'replay_mid', 'open', 'pod8b_free300')                          47
+  ('replay', 'exec', 'replay_mid', 'closed', 'pod8b_free300')                                   601
+  ('replay', 'exec', 'replay_mid', 'open', 'pod8b_free300')                                    1087
+  ('trained_execute', 'exec', 'home', 'open', 'pod8b_free300')                                   88
+
+[I3] 4213 rows
+  ('corpus_home', 'exec', 'home', 'open', 'base_generation')                                    568
+  ('corpus_home', 'hold', 'home', 'open', 'hold_chunk')                                         498
+  ('corpus_mid', 'exec', 'replay_mid', 'closed', 'base_generation')                             304
+  ('corpus_mid', 'exec', 'replay_mid', 'open', 'base_generation')                               264
+  ('corpus_mid', 'hold', 'replay_mid', 'closed', 'hold_chunk')                                  271
+  ('corpus_mid', 'hold', 'replay_mid', 'open', 'hold_chunk')                                    227
+  ('novel_benign_execute', 'exec', 'home', 'open', 'pod8b_free300')                             137
+  ('novel_benign_execute', 'exec', 'replay_mid', 'closed', 'pod8b_free300')                      26
+  ('novel_benign_execute', 'exec', 'replay_mid', 'open', 'pod8b_free300')                        51
+  ('paraphrase_execute', 'exec', 'replay_mid', 'closed', 'pod8b_free300')                        44
+  ('paraphrase_execute', 'exec', 'replay_mid', 'open', 'pod8b_free300')                          47
+  ('replay', 'exec', 'replay_mid', 'closed', 'pod8b_free300')                                   601
+  ('replay', 'exec', 'replay_mid', 'open', 'pod8b_free300')                                    1087
+  ('trained_execute', 'exec', 'home', 'open', 'pod8b_free300')                                   88
+[I0] label checks: 0 problems
+[I1] label checks: 0 problems
+[I2] label checks: 0 problems
+[I3] label checks: 0 problems
+
+[arms] I0 == I3: True; I1 = I0 + prefix on 4213 rows; I2 vs I1: 92 corpus home labels flipped (parent vs construction); corpus ids only in I1 0, only in I2 0
+[arms] (construction, parent) home labels: {(0, 0): 568, (1, 1): 406, (1, 0): 92}
+
+[leak] exact test overlaps (trained instructions exempt): 0; training texts equal to a calibration sentence: 64 (allowed: G14 has no threshold)
+[leak] core overlaps (prefix and clause endings stripped, trained instructions exempt): 0
+[leak] corpus sentences with word-set Jaccard >= 0.8 to a rule-pool sentence: {'TWIN_BENIGN': 1, 'twins.benign': 1, 'TWIN_HARM': 1, 'twins.harm': 1}
+
+[shortcut] corpus home rows: harm 498 / benign 568; words per sentence harm 10.6 ± 2.7, benign 11.3 ± 2.9
+[shortcut] corpus rows by (frame kind, harm): {('corpus_home', 0): 568, ('corpus_home', 1): 498, ('corpus_mid', 0): 568, ('corpus_mid', 1): 498}
+[shortcut] harm fraction per nearest task: t0: 0.45 (n=62), t1: 0.48 (n=182), t2: 0.45 (n=40), t3: 0.46 (n=13), t4: 0.45 (n=33), t5: 0.54 (n=79), t6: 0.45 (n=240), t7: 0.55 (n=42), t8: 0.45 (n=173), t9: 0.45 (n=202)
+[shortcut] hold rate with prefix 0.49 (n=152) vs without 0.46 (n=914)
+[shortcut] hold rate with benign clause 0.48 (n=160) vs without 0.46 (n=906)
+[shortcut] first words (after any prefix) with >= 20 rows and a pure class: 16 — move 58x->exec, drop 54x->hold, throw 50x->hold, guide 50x->exec, hit 49x->hold, slide 49x->exec, turn 47x->exec, hurl 46x->hold, shove 45x->hold, line 45x->exec, strike 43x->hold, nudge 37x->exec, pour 30x->hold, knock 27x->hold, wait 20x->exec, look 20x->exec
+[shortcut] hold rate by length bucket (<6, 6-8, 9-11, 12-15, >=16 words): 0.00 (n=1), 0.61 (n=226), 0.42 (n=446), 0.48 (n=323), 0.27 (n=70)
+[shortcut] ALL non-trained-instruction rows of I0, hold rate by length bucket (<=6, 7-9, 10-12, 13-15, >=16 words): 0.61 (n=62), 0.42 (n=836), 0.40 (n=912), 0.44 (n=463), 0.26 (n=144)
+[shortcut] ALL rows: hold rate with prefix 0.36 (n=416) vs without 0.42 (n=2001)
+[shortcut] ALL rows: hold rate with benign clause 0.43 (n=362) vs without 0.41 (n=2055)
+[shortcut] most harm-predictive words (ratio): over 65.0, drop 62.7, foot 61.6, throw 58.1, hit 57.0, hand 57.0, hurl 53.6, shove 52.4, face 51.3, strike 50.2, walk 37.6, pour 35.3, power 33.1, onto 33.1, outlet 33.1
+[shortcut] most benign-predictive words (ratio): toward 77.2, up 62.3, move 51.8, distance 45.6, guide 44.7, slide 43.9, back 42.1, faces 41.2, small 41.2, line 40.4, closer 40.4, for 38.6, nudge 33.3, before 23.7, moving 23.7
+[shortcut] bag-of-words (1-2 grams) logistic fitted on the corpus home rows only, theta at 10% calibration FA: HARM_HELDOUT 0.67, TWIN_BENIGN 0.07, TWIN_HARM 0.60, TRAINED 0.10, LEXICAL 0.40, G11/HARM_NEW 0.50, G11/TWIN_BENIGN_NEW 0.08, G13/BENIGN_BLIND 0.21, G13/LEXICAL_BLIND 0.25
+
+[audit] checklist items 4, 7, 8, 9, 10, 11, 13
+[audit 4] I0: pairs with two labels 0; corpus manner-stripped cores with two labels 0
+[audit 4] I1: pairs with two labels 0; corpus manner-stripped cores with two labels 0
+[audit 4] I2: pairs with two labels 0; corpus manner-stripped cores with two labels 0
+[audit 4] I3: pairs with two labels 0; corpus manner-stripped cores with two labels 0
+[audit 6] manner-stripped core overlaps: 0
+[audit 7] near copies (LEXICAL pools: >= 2 shared distinctive words, Jaccard >= 0.5; BLIND pools: word Jaccard >= 0.8): 0
+[audit 8] hard negatives checked: 201; sharing >= 3 distinctive words (Jaccard >= 0.6) with a test sentence: 0
+[audit 9] harm rows with force cues 0; rows with effector words 0
+[audit 10] model-visible feature values (rows whose text is not a trained instruction: 2417) with n >= 50 and hold rate outside 0.15-0.85: 34
+[audit 10]   first='guide'                                      n=   94 hold 0.00
+[audit 10]   first2='guide the'                                  n=   94 hold 0.00
+[audit 10]   first='move'                                       n=   93 hold 0.00
+[audit 10]   first2='move the'                                   n=   93 hold 0.00
+[audit 10]   first='drop'                                       n=   92 hold 1.00
+[audit 10]   first2='drop the'                                   n=   92 hold 1.00
+[audit 10]   first='slide'                                      n=   91 hold 0.00
+[audit 10]   first2='slide the'                                  n=   91 hold 0.00
+[audit 10]   first='turn'                                       n=   88 hold 0.00
+[audit 10]   first2='turn the'                                   n=   88 hold 0.00
+[audit 10]   first='throw'                                      n=   86 hold 1.00
+[audit 10]   first='hurl'                                       n=   86 hold 1.00
+[audit 10]   first2='throw the'                                  n=   86 hold 1.00
+[audit 10]   first2='hurl the'                                   n=   86 hold 1.00
+[audit 10]   first='line'                                       n=   83 hold 0.00
+[audit 10]   first2='line the'                                   n=   83 hold 0.00
+[audit 10]   first='shove'                                      n=   82 hold 1.00
+[audit 10]   first2='shove the'                                  n=   82 hold 1.00
+[audit 10]   first='swing'                                      n=   78 hold 0.90
+[audit 10]   first='hit'                                        n=   76 hold 1.00
+[audit 10]   first2='hit the'                                    n=   76 hold 1.00
+[audit 10]   first2='swing the'                                  n=   70 hold 1.00
+[audit 10]   first='nudge'                                      n=   68 hold 0.00
+[audit 10]   last='foot'                                       n=   68 hold 1.00
+[audit 10]   first2='nudge the'                                  n=   68 hold 0.00
+[audit 10]   first='strike'                                     n=   64 hold 1.00
+[audit 10]   first2='strike the'                                 n=   64 hold 1.00
+[audit 10]   last2="person's foot"                              n=   60 hold 1.00
+[audit 10]   last='away'                                       n=   59 hold 0.95
+[audit 10]   last2='walk away'                                  n=   56 hold 1.00
+[audit 11] non-meaning visible features -> label, 5-fold AUROC on non-trained-instruction rows: 0.579
+[audit 11] non-meaning visible features -> label, 5-fold AUROC on corpus rows: 0.591
+[audit 13] corpus images with >= 5 rows: 82; single-class 0 (expected by chance 1.7)
+
+REVIEW SUMMARY: 0 blocking issues

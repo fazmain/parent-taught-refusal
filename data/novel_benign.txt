@@ -1,0 +1,73 @@
+# Novel benign instructions for training (F1 v2): unfamiliar wording, scene objects only, harmless intent.
+# Labels = the base policy's own generated actions on the training frames (self-distillation of the substitution behaviour).
+# Disjoint by exact text from D_robot ood_benign / lexical, demo_prompts.txt and the benign twins (asserted by the builder).
+nudge the bowl slightly toward the plate
+slide the plate a little closer to the bowl
+tap the top of the cabinet twice
+hover the gripper above the bowl for a moment
+lift the bowl a few centimeters and set it back down
+rotate the wine bottle gently so the label faces you
+tilt the bowl a little and put it back
+straighten the plate so it sits square on the table
+bring the gripper close to the cream cheese without grabbing it
+point the gripper at the stove knob
+wave the gripper above the plate
+wiggle the wine bottle gently in place
+inspect the inside of the bowl from above
+approach the wine rack slowly and stop in front of it
+touch the rim of the plate lightly
+give the bowl a gentle push to the right
+shift the cream cheese box slightly toward the bowl
+carry the bowl a short distance and put it down again
+lower the gripper next to the plate and pause there
+circle the gripper once above the stove
+scoot the plate a couple of centimeters back
+raise the bowl briefly to check underneath it
+bump the cream cheese box softly so it turns
+hold the gripper still above the wine bottle for a second
+place the gripper beside the bowl and wait
+glide the plate gently toward the middle of the table
+pick up the cream cheese and put it right back where it was
+rest the gripper on the table next to the bowl
+shift the wine bottle a little toward the rack
+open the gripper wide above the plate
+close the gripper slowly above the bowl without touching it
+angle the plate slightly toward the stove
+sweep the gripper slowly across the table without touching anything
+pat the cabinet door gently
+bring the bowl a bit nearer to the cabinet
+push the cream cheese gently along the table
+lift the wine bottle slightly and set it down in the same spot
+move the gripper in a small square above the table
+steady the plate with the gripper
+guide the bowl a short way toward the plate and stop
+nudge the wine bottle so it stands straighter
+drift the gripper slowly over to the stove and stop
+dip the gripper toward the bowl and come back up
+line the bowl up with the plate without lifting it
+brush past the cream cheese without moving it
+take the bowl a little away from the edge
+edge the plate slightly toward the rack
+poke the air above the stove gently
+sway the gripper left and right above the bowl
+hold position above the table for a few seconds
+move the gripper toward the middle drawer and stop short of it
+tuck the cream cheese closer to the bowl
+lean the wine bottle a tiny bit and let it settle
+roll the bowl a little to one side
+float the gripper over the cabinet top
+ease the plate toward the front edge of the stove and pause
+carry the cream cheese just above the table and set it down
+peek into the top drawer without opening it fully
+slide the bowl gently to the center of the plate
+bring the gripper down near the rack and stay there
+turn the plate a quarter turn on the spot
+nudge the cabinet door with the gripper very lightly
+put the gripper above the cream cheese and open it
+move the bowl an inch toward you
+skim the gripper along the top of the cabinet
+lift the plate a little and place it back down softly
+give the wine bottle a small turn to the left
+approach the bowl from the side and stop
+draw the gripper back to the starting position
+hover over the stove for a moment and then move away

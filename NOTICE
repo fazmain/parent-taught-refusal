@@ -1,0 +1,22 @@
+parent-taught-refusal
+Copyright (c) 2026 Faiaz Azmain
+
+Code in this repository is released under the MIT License (see LICENSE).
+Data under data/ is released under CC BY 4.0, except the Alpaca-derived
+harmless chat prompts noted in data/README.md, which keep their upstream
+CC BY-NC 4.0 terms.
+
+Third-party code:
+  third_party/nora/nora_utils.py  copied from https://github.com/declare-lab/nora (MIT);
+                                  see third_party/nora/LICENSE.
+
+Models used (downloaded at run time, not included here):
+  declare-lab/nora-long-finetuned-libero-goal  (NORA; declare-lab, stated MIT)
+  Qwen/Qwen2.5-VL-3B-Instruct                  (Qwen Research License; Alibaba Cloud)
+
+Trained adapter weights are distributed separately at
+https://huggingface.co/fazmain/parent-taught-refusal under the Qwen Research
+License ("Built with Qwen").
+
+Benchmarks: LIBERO (MIT; datasets CC BY 4.0) and the LIBERO-Safety fork
+(Apache-2.0); neither is redistributed here.

@@ -1,0 +1,188 @@
+#!/usr/bin/env python3
+"""Recompute every number printed in the paper from the released files and assert that it matches.
+
+    python scripts/verify_release.py              # check; exit 0 only if every recomputable number matches
+    python scripts/verify_release.py -v           # also list every claim
+    python scripts/verify_release.py --write-docs # regenerate docs/paper_numbers.json and docs/paper_claims.md
+
+The printed values come from docs/paper_numbers.json (one entry per number in the arXiv paper, with the tex file and
+line). The recompute rules live in scripts/claims/part_*.py, one module per part of the paper, and read only data/
+and results/ (plus a few protocol constants from the experiment scripts in experiments/). Comparison: counts and
+other integers must match exactly; rates must match to the printed precision (|recomputed - printed| <= half a unit
+in the last printed digit). Numbers quoted from cited papers are listed as external; numbers that exist only in the
+private project log (GPU sizes, spend, session count, one pre-registered bar) carry
+"source": "project log (private)" and are reported as recorded, not recomputed.
+
+CPU only, a few seconds.
+"""
+from __future__ import annotations
+
+import argparse
+import importlib
+import json
+import sys
+import time
+import traceback
+from collections import Counter
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts" / "claims"))
+
+import common  # noqa: E402
+from common import RECORDED, compare  # noqa: E402
+
+NUMBERS = ROOT / "docs" / "paper_numbers.json"
+CLAIMS_MD = ROOT / "docs" / "paper_claims.md"
+PARTS = sorted(q.stem for q in (ROOT / "scripts" / "claims").glob("part_*.py"))
+PART_TITLE = {"part_a_diagnosis": "Diagnosis (Section 3), refusal definition (Section 2)",
+              "part_b_install": "Routes before the verdict (Section 4), parent-gated reference (Appendix B)",
+              "part_c_firstcall": "Parent-taught verdict at the first call, training data, install search",
+              "part_d_sim": "Simulator results (reporting and selection sets)",
+              "part_e_external": "LIBERO-Safety, related work, limitations, compute"}
+# reading order of the tex files, for the claims sheet
+TEX = ["main.tex", "sections/intro.tex", "sections/setup.tex", "sections/diagnosis.tex", "sections/install.tex",
+       "tables/routes.tex", "sections/ptv.tex", "sections/fig_ptv.tex", "tables/reporting.tex",
+       "tables/ablation.tex", "tables/reference.tex", "sections/related.tex", "sections/limitations.tex",
+       "sections/conclusion.tex", "sections/appendix.tex"]
+
+
+def load_claims():
+    claims, seen = [], set()
+    for name in PARTS:
+        mod = importlib.import_module(name)
+        for c in mod.CLAIMS:
+            if c.id in seen:
+                raise SystemExit(f"duplicate claim id {c.id} in {name}")
+            seen.add(c.id)
+            c.part = name
+            claims.append(c)
+    return claims
+
+
+def evaluate(c):
+    """(status, recomputed): status in ok / MISMATCH / recorded / external."""
+    if c.source == RECORDED:
+        return "recorded", c.recorded
+    if c.kind == "external" or c.fn is None:
+        return ("external", None) if c.kind == "external" else ("MISMATCH", "no recompute rule")
+    try:
+        v = c.fn()
+    except Exception as e:  # noqa: BLE001  report and continue with the next claim
+        return "MISMATCH", f"ERROR: {type(e).__name__}: {e} | {traceback.format_exc(limit=2).splitlines()[-1]}"
+    if isinstance(v, float):
+        v = round(v, 6)
+    return ("ok" if compare(c.value, v) else "MISMATCH"), v
+
+
+def record(c, status, v):
+    rec = {"id": c.id, "value": c.value, "unit": c.unit, "kind": c.kind, "where": c.where, "measures": c.measures,
+           "script": c.script, "raw_files": list(c.raw), "rule": c.rule, "recomputed": v,
+           "match": {"ok": True, "MISMATCH": False}.get(status), "note": c.note, "part": c.part}
+    if c.source == RECORDED:
+        rec["source"] = RECORDED
+        rec["recorded"] = c.recorded
+    return rec
+
+
+def _loc_key(r):
+    rel, line = r["where"].rsplit(":", 1)
+    return (TEX.index(rel) if rel in TEX else len(TEX), int(line), r["id"])
+
+
+def write_docs(recs):
+    recs = sorted(recs, key=_loc_key)
+    NUMBERS.write_text(json.dumps(recs, indent=1) + "\n")
+    n_ok = sum(r["match"] is True for r in recs)
+    n_rec = sum(r.get("source") == RECORDED for r in recs)
+    n_ext = sum(r["kind"] == "external" for r in recs)
+    esc = lambda s: str(s).replace("|", "\\|").replace("\n", " ")   # noqa: E731
+    out = ["# Paper claims", "",
+           "Every number printed in the arXiv paper: where it appears (tex file and line in the arXiv LaTeX source), "
+           "what it measures, the script that produced it, the released file(s) it is recomputed from, the rule, "
+           "the recomputed value and whether it matches. Generated by `python scripts/verify_release.py --write-docs` "
+           "from `scripts/claims/part_*.py`; do not edit by hand. The same rows, machine-readable, are in "
+           "[paper_numbers.json](paper_numbers.json).", "",
+           "Kinds: `measured` (recomputed from result rows), `count` (size of a data set), `config` (a hyperparameter "
+           "or protocol constant, read from a config, `train_meta.json` or the experiment code), `derived` "
+           "(arithmetic on other recomputed numbers), `log` (exists only as printed text: parsed from a shipped text "
+           "table, or recorded from the private project log), `external` (quoted from a cited paper).", "",
+           f"Rows: {len(recs)}. Recomputed and matched: {n_ok}. Mismatched: "
+           f"{sum(r['match'] is False for r in recs)}. Recorded from the private project log, not recomputed: "
+           f"{n_rec}. External (cited papers): {n_ext}.", ""]
+    rec_rows = [r for r in recs if r.get("source") == RECORDED]
+    if rec_rows:
+        out += ["## Recorded, not recomputed", "",
+                "These numbers exist only in the private project log (GPU sizes, spend, session count, one "
+                "pre-registered bar). Their logged values are stored here and in `paper_numbers.json` with "
+                f'`"source": "{RECORDED}"`; `verify_release.py` reports them and does not fail on them.', "",
+                "| id | printed | where | measures | logged value |", "|---|---|---|---|---|"]
+        out += [f"| {r['id']} | {esc(r['value'])} | {r['where']} | {esc(r['measures'])} | {esc(r['recorded'])} |"
+                for r in rec_rows]
+        out.append("")
+    cur = None
+    for r in recs:
+        sec = r["where"].rsplit(":", 1)[0]
+        if sec != cur:
+            cur = sec
+            out += ["", f"## {sec}", "",
+                    "| id | printed | line | kind | measures | script | released file(s) | rule | recomputed | match |",
+                    "|---|---|---|---|---|---|---|---|---|---|"]
+        m = "recorded" if r.get("source") == RECORDED else {True: "yes", False: "**NO**", None: "n/a"}[r["match"]]
+        files = "<br>".join(f"`{f}`" for f in r["raw_files"]) or ("project log (private)" if r.get("source") else "")
+        out.append("| " + " | ".join([
+            esc(r["id"]), esc(r["value"]), r["where"].rsplit(":", 1)[1], r["kind"], esc(r["measures"]),
+            f"`{r['script']}`" if r["script"] else "", files,
+            esc(r["rule"]) + (f" Note: {esc(r['note'])}" if r["note"] else ""), esc(r["recomputed"]), m]) + " |")
+    CLAIMS_MD.write_text("\n".join(out) + "\n")
+
+
+def main():
+    ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
+    ap.add_argument("-v", "--verbose", action="store_true", help="list every claim, not only failures")
+    ap.add_argument("--write-docs", action="store_true",
+                    help="regenerate docs/paper_numbers.json and docs/paper_claims.md from the claims")
+    a = ap.parse_args()
+    t0 = time.time()
+    claims = load_claims()
+    results = [(c, *evaluate(c)) for c in claims]
+    if a.write_docs:
+        write_docs([record(c, s, v) for c, s, v in results])
+        print(f"wrote {NUMBERS.relative_to(ROOT)} and {CLAIMS_MD.relative_to(ROOT)}")
+
+    printed = {r["id"]: r for r in json.loads(NUMBERS.read_text())}
+    problems = []
+    if set(printed) != {c.id for c in claims}:
+        problems.append(f"docs/paper_numbers.json ids differ from the claims: "
+                        f"{len(set(printed) - {c.id for c in claims})} only in the file, "
+                        f"{len({c.id for c in claims} - set(printed))} only in the claims")
+    tally = Counter()
+    by_part = Counter()
+    for c, status, v in results:
+        want = printed.get(c.id)
+        if want is not None and want["value"] != c.value:
+            problems.append(f"{c.id}: printed value {want['value']!r} in paper_numbers.json, {c.value!r} in claims")
+        if status in ("ok", "MISMATCH") and want is not None:
+            status = "ok" if compare(want["value"], v) else "MISMATCH"   # the json's printed value is the reference
+        tally[status] += 1
+        by_part[(c.part, status)] += 1
+        if status == "MISMATCH" or a.verbose:
+            rc = f"{v:.4f}" if isinstance(v, float) else str(v)
+            print(f"{status:<9} {c.id:<40} printed {c.value:>9}  recomputed {rc[:70]:<14} {c.where}")
+    print()
+    for part in PARTS:
+        row = {s: by_part[(part, s)] for s in ("ok", "MISMATCH", "recorded", "external")}
+        print(f"  {PART_TITLE.get(part, part):<80} ok {row['ok']:>4}  mismatch {row['MISMATCH']:>2}  "
+              f"recorded {row['recorded']:>2}  external {row['external']:>2}")
+    print(f"\nclaims {len(claims)}: recomputed and matched {tally['ok']}, mismatched {tally['MISMATCH']}, "
+          f"recorded not recomputed {tally['recorded']} (project log, private), external {tally['external']} "
+          f"(cited papers)   [{time.time() - t0:.1f} s]")
+    for msg in problems:
+        print("PROBLEM:", msg)
+    ok = tally["MISMATCH"] == 0 and not problems
+    print("PASS: every recomputable number matches the paper" if ok else "FAIL")
+    sys.exit(0 if ok else 1)
+
+
+if __name__ == "__main__":
+    main()

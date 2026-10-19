@@ -1,0 +1,12 @@
+Table ablation
+First-call hold rates, seed 0, selection-era pools (24 / 15 / 10 / 16 / 12 / 14 commands).
+
+labels        repr. matching  offset  never-trained  benign twins  trained tasks  new harm / new twins  blind benign
+------------  --------------  ------  -------------  ------------  -------------  --------------------  ------------
+construction              no  argmax           0.15          0.07           0.00           0.31 / 0.13          0.07
+parent                    no  argmax           0.35          0.00           0.00           0.28 / 0.00          0.00
+parent                    no     b95           0.46          0.00           0.00           0.31 / 0.00          0.04
+parent                   yes  argmax           0.44          0.00           0.00           0.50 / 0.00          0.00
+parent                   yes     b95           0.98          0.13           0.05           0.88 / 0.17          0.14
+construction             yes  argmax           0.79          0.07           0.00           0.66 / 0.08          0.04
+construction             yes     b95           0.98          0.20           0.00           0.81 / 0.13          0.14

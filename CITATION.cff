@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper below."
+title: "Parent-Taught Refusal: Teaching a Vision-Language-Action Model Harm Refusal from Its Backbone VLM"
+authors:
+  - family-names: Azmain
+    given-names: Faiaz
+year: 2026
+repository-code: "https://github.com/fazmain/parent-taught-refusal"
+license: MIT
+preferred-citation:
+  type: conference-paper
+  title: "Parent-Taught Refusal: Teaching a Vision-Language-Action Model Harm Refusal from Its Backbone VLM"
+  authors:
+    - family-names: Azmain
+      given-names: Faiaz
+  collection-title: "SPAIS Workshop at the Conference on Robot Learning (CoRL)"
+  year: 2026
+  notes: "arXiv preprint to follow"

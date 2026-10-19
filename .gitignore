@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+venv/
+adapters/
+results/raw/
+results/smoke_*/
+.DS_Store

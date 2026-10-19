@@ -1,0 +1,2592 @@
+{
+ "exp": "g14_build_rows/rows",
+ "ts": "2026-09-22 02:46:18",
+ "smoke": false,
+ "stub_generator": false,
+ "stub_teacher": false,
+ "corpus_digest": "a879f656fdf90e5e",
+ "corpus_version": 3,
+ "checkpoint": "declare-lab/nora-long-finetuned-libero-goal",
+ "arms": {
+  "I0": "free_big",
+  "I1": "verdict",
+  "I2": "verdict_parent",
+  "I3": "free_align"
+ },
+ "epochs_per_arm": {
+  "I0": 1.9976263944932353,
+  "I1": 1.9976263944932353,
+  "I2": 1.9976263944932353,
+  "I3": 1.9976263944932353
+ },
+ "structural": {
+  "I0": {
+   "closed_holds": 271,
+   "images_ge_min": 133,
+   "hold_only_images": 0,
+   "corpus_mid_hold_share": 0.46716697936210133,
+   "hold_share_by_frame_kind_all_rows": {
+    "home": 0.38574748257164987,
+    "mid": 0.1704312114989733
+   },
+   "task_harm_fraction": {
+    "0": 0.45161290322580644,
+    "1": 0.4835164835164835,
+    "2": 0.45,
+    "3": 0.46153846153846156,
+    "4": 0.45454545454545453,
+    "5": 0.5443037974683544,
+    "6": 0.45,
+    "7": 0.5476190476190477,
+    "8": 0.4508670520231214,
+    "9": 0.4504950495049505
+   },
+   "prefix_hold_rate": {
+    "with": [
+     0.4868421052631579,
+     152
+    ],
+    "without": [
+     0.4638949671772429,
+     914
+    ]
+   },
+   "prefix_gap": 0.02294713808591503,
+   "all_rows_length_buckets": {
+    "<=6": [
+     0.6129032258064516,
+     62
+    ],
+    "7-9": [
+     0.423444976076555,
+     836
+    ],
+    "10-12": [
+     0.3969298245614035,
+     912
+    ],
+    "13-15": [
+     0.4406047516198704,
+     463
+    ],
+    ">=16": [
+     0.2638888888888889,
+     144
+    ]
+   },
+   "all_rows_cues": {
+    "prefix": {
+     "with": [
+      0.3557692307692308,
+      416
+     ],
+     "without": [
+      0.4237881059470265,
+      2001
+     ],
+     "gap": 0.0680188751777957
+    },
+    "clause": {
+     "with": [
+      0.425414364640884,
+      362
+     ],
+     "without": [
+      0.4097323600973236,
+      2055
+     ],
+     "gap": 0.01568200454356039
+    },
+    "manner": {
+     "with": [
+      0.41273885350318473,
+      785
+     ],
+     "without": [
+      0.4117647058823529,
+      1632
+     ],
+     "gap": 0.0009741476208318112
+    }
+   },
+   "corpus_bare_fraction": {
+    "0": 0.5193661971830986,
+    "1": 0.4919678714859438
+   },
+   "violations": []
+  },
+  "I1": {
+   "closed_holds": 271,
+   "images_ge_min": 133,
+   "hold_only_images": 0,
+   "corpus_mid_hold_share": 0.46716697936210133,
+   "hold_share_by_frame_kind_all_rows": {
+    "home": 0.38574748257164987,
+    "mid": 0.1704312114989733
+   },
+   "task_harm_fraction": {
+    "0": 0.45161290322580644,
+    "1": 0.4835164835164835,
+    "2": 0.45,
+    "3": 0.46153846153846156,
+    "4": 0.45454545454545453,
+    "5": 0.5443037974683544,
+    "6": 0.45,
+    "7": 0.5476190476190477,
+    "8": 0.4508670520231214,
+    "9": 0.4504950495049505
+   },
+   "prefix_hold_rate": {
+    "with": [
+     0.4868421052631579,
+     152
+    ],
+    "without": [
+     0.4638949671772429,
+     914
+    ]
+   },
+   "prefix_gap": 0.02294713808591503,
+   "all_rows_length_buckets": {
+    "<=6": [
+     0.6129032258064516,
+     62
+    ],
+    "7-9": [
+     0.423444976076555,
+     836
+    ],
+    "10-12": [
+     0.3969298245614035,
+     912
+    ],
+    "13-15": [
+     0.4406047516198704,
+     463
+    ],
+    ">=16": [
+     0.2638888888888889,
+     144
+    ]
+   },
+   "all_rows_cues": {
+    "prefix": {
+     "with": [
+      0.3557692307692308,
+      416
+     ],
+     "without": [
+      0.4237881059470265,
+      2001
+     ],
+     "gap": 0.0680188751777957
+    },
+    "clause": {
+     "with": [
+      0.425414364640884,
+      362
+     ],
+     "without": [
+      0.4097323600973236,
+      2055
+     ],
+     "gap": 0.01568200454356039
+    },
+    "manner": {
+     "with": [
+      0.41273885350318473,
+      785
+     ],
+     "without": [
+      0.4117647058823529,
+      1632
+     ],
+     "gap": 0.0009741476208318112
+    }
+   },
+   "corpus_bare_fraction": {
+    "0": 0.5193661971830986,
+    "1": 0.4919678714859438
+   },
+   "violations": []
+  },
+  "I2": {
+   "closed_holds": 219,
+   "images_ge_min": 133,
+   "hold_only_images": 0,
+   "corpus_mid_hold_share": 0.3808630393996248,
+   "hold_share_by_frame_kind_all_rows": {
+    "home": 0.3144848954298993,
+    "mid": 0.13894592744695414
+   },
+   "task_harm_fraction": {
+    "0": 0.4032258064516129,
+    "1": 0.3956043956043956,
+    "2": 0.45,
+    "3": 0.46153846153846156,
+    "4": 0.3333333333333333,
+    "5": 0.4050632911392405,
+    "6": 0.32916666666666666,
+    "7": 0.42857142857142855,
+    "8": 0.34104046242774566,
+    "9": 0.42574257425742573
+   },
+   "prefix_hold_rate": {
+    "with": [
+     0.39473684210526316,
+     152
+    ],
+    "without": [
+     0.3785557986870897,
+     914
+    ]
+   },
+   "prefix_gap": 0.016181043418173446,
+   "all_rows_length_buckets": {
+    "<=6": [
+     0.5806451612903226,
+     62
+    ],
+    "7-9": [
+     0.37559808612440193,
+     836
+    ],
+    "10-12": [
+     0.33114035087719296,
+     912
+    ],
+    "13-15": [
+     0.2937365010799136,
+     463
+    ],
+    ">=16": [
+     0.16666666666666666,
+     144
+    ]
+   },
+   "all_rows_cues": {
+    "prefix": {
+     "with": [
+      0.28846153846153844,
+      416
+     ],
+     "without": [
+      0.3458270864567716,
+      2001
+     ],
+     "gap": 0.05736554799523319
+    },
+    "clause": {
+     "with": [
+      0.3425414364640884,
+      362
+     ],
+     "without": [
+      0.3347931873479319,
+      2055
+     ],
+     "gap": 0.007748249116156514
+    },
+    "manner": {
+     "with": [
+      0.310828025477707,
+      785
+     ],
+     "without": [
+      0.3480392156862745,
+      1632
+     ],
+     "gap": 0.0372111902085675
+    }
+   },
+   "corpus_bare_fraction": {
+    "0": 0.5193661971830986,
+    "1": 0.4919678714859438
+   },
+   "violations": []
+  },
+  "I3": {
+   "closed_holds": 271,
+   "images_ge_min": 133,
+   "hold_only_images": 0,
+   "corpus_mid_hold_share": 0.46716697936210133,
+   "hold_share_by_frame_kind_all_rows": {
+    "home": 0.38574748257164987,
+    "mid": 0.1704312114989733
+   },
+   "task_harm_fraction": {
+    "0": 0.45161290322580644,
+    "1": 0.4835164835164835,
+    "2": 0.45,
+    "3": 0.46153846153846156,
+    "4": 0.45454545454545453,
+    "5": 0.5443037974683544,
+    "6": 0.45,
+    "7": 0.5476190476190477,
+    "8": 0.4508670520231214,
+    "9": 0.4504950495049505
+   },
+   "prefix_hold_rate": {
+    "with": [
+     0.4868421052631579,
+     152
+    ],
+    "without": [
+     0.4638949671772429,
+     914
+    ]
+   },
+   "prefix_gap": 0.02294713808591503,
+   "all_rows_length_buckets": {
+    "<=6": [
+     0.6129032258064516,
+     62
+    ],
+    "7-9": [
+     0.423444976076555,
+     836
+    ],
+    "10-12": [
+     0.3969298245614035,
+     912
+    ],
+    "13-15": [
+     0.4406047516198704,
+     463
+    ],
+    ">=16": [
+     0.2638888888888889,
+     144
+    ]
+   },
+   "all_rows_cues": {
+    "prefix": {
+     "with": [
+      0.3557692307692308,
+      416
+     ],
+     "without": [
+      0.4237881059470265,
+      2001
+     ],
+     "gap": 0.0680188751777957
+    },
+    "clause": {
+     "with": [
+      0.425414364640884,
+      362
+     ],
+     "without": [
+      0.4097323600973236,
+      2055
+     ],
+     "gap": 0.01568200454356039
+    },
+    "manner": {
+     "with": [
+      0.41273885350318473,
+      785
+     ],
+     "without": [
+      0.4117647058823529,
+      1632
+     ],
+     "gap": 0.0009741476208318112
+    }
+   },
+   "corpus_bare_fraction": {
+    "0": 0.5193661971830986,
+    "1": 0.4919678714859438
+   },
+   "violations": []
+  }
+ },
+ "balance": {
+  "0": {
+   "before": [
+    28,
+    73
+   ],
+   "after": [
+    28,
+    34
+   ],
+   "harm_fraction": 0.45161290322580644
+  },
+  "1": {
+   "before": [
+    88,
+    94
+   ],
+   "after": [
+    88,
+    94
+   ],
+   "harm_fraction": 0.4835164835164835
+  },
+  "2": {
+   "before": [
+    18,
+    41
+   ],
+   "after": [
+    18,
+    22
+   ],
+   "harm_fraction": 0.45
+  },
+  "3": {
+   "before": [
+    6,
+    30
+   ],
+   "after": [
+    6,
+    7
+   ],
+   "harm_fraction": 0.46153846153846156
+  },
+  "4": {
+   "before": [
+    15,
+    32
+   ],
+   "after": [
+    15,
+    18
+   ],
+   "harm_fraction": 0.45454545454545453
+  },
+  "5": {
+   "before": [
+    43,
+    36
+   ],
+   "after": [
+    43,
+    36
+   ],
+   "harm_fraction": 0.5443037974683544
+  },
+  "6": {
+   "before": [
+    108,
+    214
+   ],
+   "after": [
+    108,
+    132
+   ],
+   "harm_fraction": 0.45
+  },
+  "7": {
+   "before": [
+    24,
+    19
+   ],
+   "after": [
+    23,
+    19
+   ],
+   "harm_fraction": 0.5476190476190477
+  },
+  "8": {
+   "before": [
+    78,
+    119
+   ],
+   "after": [
+    78,
+    95
+   ],
+   "harm_fraction": 0.4508670520231214
+  },
+  "9": {
+   "before": [
+    91,
+    144
+   ],
+   "after": [
+    91,
+    111
+   ],
+   "harm_fraction": 0.4504950495049505
+  }
+ },
+ "near_hold_common": {
+  "replay/tokens_2_5": 3,
+  "paraphrase_execute/tokens_2_5": 2,
+  "novel_benign_execute/tokens_2_5": 10,
+  "trained_execute/tokens_2_5": 2
+ },
+ "dropped_sentences": {
+  "g14c00209": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c00259": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c00371": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c00499": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c00529": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c00552": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c00563": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c00569": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c00618": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c00643": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c00665": [
+   "invalid",
+   "home"
+  ],
+  "g14c00668": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c00697": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c00752": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c00768": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c00809": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c00811": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c00838": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c00872": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c00917": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c00922": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c00939": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c00941": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c00942": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c00948": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c00962": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c00968": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c01008": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c01022": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c01028": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c01051": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c01059": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c01135": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c01138": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c01146": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c01188": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c01205": [
+   "invalid",
+   "mid"
+  ],
+  "g14c01219": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c01238": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c01239": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c01245": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c01268": [
+   "tokens_2_5",
+   "home"
+  ],
+  "g14c01279": [
+   "tokens_2_5",
+   "home"
+  ]
+ },
+ "files": {
+  "I0": "results/g14/rows/train_free_big.jsonl",
+  "I1": "results/g14/rows/train_verdict.jsonl",
+  "I2": "results/g14/rows/train_verdict_parent.jsonl",
+  "I3": "results/g14/rows/train_free_align.jsonl"
+ },
+ "rows_sha1": {
+  "I0": "5ef2b12747000862e1fd18d98c45ff1dcfa1439a",
+  "I1": "a1dcf776d937966ec261024c7b36d4742828b52d",
+  "I2": "f184c26e07bbe4921517873eb93efe92997a2a83",
+  "I3": "5ef2b12747000862e1fd18d98c45ff1dcfa1439a"
+ },
+ "verdict_ids": {
+  "[STOP]": [
+   58,
+   50669,
+   60
+  ],
+  "[GO]": [
+   58,
+   15513,
+   60
+  ]
+ },
+ "hold_open_gen_ids": [
+  152105,
+  151976,
+  151956,
+  151974,
+  152037,
+  151934,
+  151645
+ ],
+ "hold_closed_gen_ids": [
+  152105,
+  151976,
+  151956,
+  151974,
+  152058,
+  151934,
+  151645
+ ],
+ "n_corpus_sentences": 1066,
+ "n_new_generations": 1874,
+ "n_labels_kept": 1872,
+ "n_dropped_sentences": 43,
+ "steps_all_arms": 1052,
+ "train_batch": 8,
+ "train_epochs": 2,
+ "mid_step": 30,
+ "align_layers": [
+  6,
+  12,
+  18,
+  24
+ ],
+ "rows": {
+  "I0": {
+   "replay": 1688,
+   "paraphrase_execute": 91,
+   "novel_benign_execute": 214,
+   "trained_execute": 88,
+   "home_hold": 498,
+   "home_execute": 568,
+   "mid_hold": 498,
+   "mid_execute": 568,
+   "total": 4213,
+   "hold": 996,
+   "execute": 3217,
+   "open_holds": 725,
+   "closed_holds": 271,
+   "mid_rows_gripper": {
+    "hold/open": 227,
+    "hold/closed": 271,
+    "execute/open": 264,
+    "execute/closed": 304
+   },
+   "stop": 0,
+   "go": 0,
+   "corpus_harm_sentences": 498,
+   "corpus_benign_sentences": 568,
+   "n_frames": 1798,
+   "n_sentences": 1214
+  },
+  "I1": {
+   "replay": 1688,
+   "paraphrase_execute": 91,
+   "novel_benign_execute": 214,
+   "trained_execute": 88,
+   "home_hold": 498,
+   "home_execute": 568,
+   "mid_hold": 498,
+   "mid_execute": 568,
+   "total": 4213,
+   "hold": 996,
+   "execute": 3217,
+   "open_holds": 725,
+   "closed_holds": 271,
+   "mid_rows_gripper": {
+    "hold/open": 227,
+    "hold/closed": 271,
+    "execute/open": 264,
+    "execute/closed": 304
+   },
+   "stop": 996,
+   "go": 3217,
+   "corpus_harm_sentences": 498,
+   "corpus_benign_sentences": 568,
+   "n_frames": 1798,
+   "n_sentences": 1214
+  },
+  "I2": {
+   "replay": 1688,
+   "paraphrase_execute": 91,
+   "novel_benign_execute": 214,
+   "trained_execute": 88,
+   "home_hold": 406,
+   "home_execute": 660,
+   "mid_hold": 406,
+   "mid_execute": 660,
+   "total": 4213,
+   "hold": 812,
+   "execute": 3401,
+   "open_holds": 593,
+   "closed_holds": 219,
+   "mid_rows_gripper": {
+    "hold/open": 187,
+    "hold/closed": 219,
+    "execute/open": 304,
+    "execute/closed": 356
+   },
+   "stop": 812,
+   "go": 3401,
+   "corpus_harm_sentences": 406,
+   "corpus_benign_sentences": 660,
+   "n_frames": 1798,
+   "n_sentences": 1214
+  },
+  "I3": {
+   "replay": 1688,
+   "paraphrase_execute": 91,
+   "novel_benign_execute": 214,
+   "trained_execute": 88,
+   "home_hold": 498,
+   "home_execute": 568,
+   "mid_hold": 498,
+   "mid_execute": 568,
+   "total": 4213,
+   "hold": 996,
+   "execute": 3217,
+   "open_holds": 725,
+   "closed_holds": 271,
+   "mid_rows_gripper": {
+    "hold/open": 227,
+    "hold/closed": 271,
+    "execute/open": 264,
+    "execute/closed": 304
+   },
+   "stop": 0,
+   "go": 0,
+   "corpus_harm_sentences": 498,
+   "corpus_benign_sentences": 568,
+   "n_frames": 1798,
+   "n_sentences": 1214
+  }
+ },
+ "diffs": {
+  "i3_equals_i0": true,
+  "i1_is_i0_plus_verdict": true,
+  "i1_i2_same_pairs": true,
+  "i2_label_flips_home": 92,
+  "i2_label_flips_mid": 92
+ },
+ "agreement": {
+  "drobot_benign/0": {
+   "n": 14,
+   "abstain": 0,
+   "parent_harm": 0.0,
+   "agree": 1.0
+  },
+  "drobot_harm/1": {
+   "n": 20,
+   "abstain": 1,
+   "parent_harm": 0.8,
+   "agree": 0.8
+  },
+  "expand_benign/0": {
+   "n": 545,
+   "abstain": 0,
+   "parent_harm": 0.0,
+   "agree": 1.0
+  },
+  "expand_harm/1": {
+   "n": 483,
+   "abstain": 33,
+   "parent_harm": 0.8095238095238095,
+   "agree": 0.8095238095238095
+  },
+  "hard_negative/0": {
+   "n": 272,
+   "abstain": 5,
+   "parent_harm": 0.0,
+   "agree": 1.0
+  },
+  "trained/0": {
+   "n": 10,
+   "abstain": 0,
+   "parent_harm": 0.0,
+   "agree": 1.0
+  },
+  "overall": {
+   "agree": 0.9285714285714286,
+   "harm_to_benign": 96,
+   "benign_to_harm": 0,
+   "n": 1344,
+   "abstain": 39
+  }
+ },
+ "n_twins_held_out": 15,
+ "n_distinct_labels_i0": 2881,
+ "n_mid_closed": 575,
+ "corpus_frame_kind_class": {
+  "I0": {
+   "home/execute": 568,
+   "home/hold": 498,
+   "mid/execute": 568,
+   "mid/hold": 498
+  },
+  "I1": {
+   "home/execute": 568,
+   "home/hold": 498,
+   "mid/execute": 568,
+   "mid/hold": 498
+  },
+  "I2": {
+   "home/execute": 660,
+   "home/hold": 406,
+   "mid/execute": 660,
+   "mid/hold": 406
+  },
+  "I3": {
+   "home/execute": 568,
+   "home/hold": 498,
+   "mid/execute": 568,
+   "mid/hold": 498
+  }
+ },
+ "mid_rows_version": 2,
+ "n_new_generations_by_kind": {
+  "mid": 937,
+  "home": 937
+ },
+ "review": {
+  "I0": {
+   "file": "results/g14/rows/train_free_big.review.txt",
+   "rows": {
+    "corpus_home/execute/home/open": 568,
+    "corpus_home/hold/home/open": 498,
+    "corpus_mid/execute/replay_mid/closed": 304,
+    "corpus_mid/execute/replay_mid/open": 264,
+    "corpus_mid/hold/replay_mid/closed": 271,
+    "corpus_mid/hold/replay_mid/open": 227,
+    "novel_benign_execute/execute/home/open": 137,
+    "novel_benign_execute/execute/replay_mid/closed": 26,
+    "novel_benign_execute/execute/replay_mid/open": 51,
+    "paraphrase_execute/execute/replay_mid/closed": 44,
+    "paraphrase_execute/execute/replay_mid/open": 47,
+    "replay/execute/replay_mid/closed": 601,
+    "replay/execute/replay_mid/open": 1087,
+    "trained_execute/execute/home/open": 88
+   },
+   "frame_kind_class": {
+    "home/execute": 793,
+    "home/hold": 498,
+    "mid/execute": 2424,
+    "mid/hold": 498
+   },
+   "frame_kind_class_gripper": {
+    "home/execute/open": 793,
+    "home/hold/open": 498,
+    "mid/execute/closed": 975,
+    "mid/execute/open": 1449,
+    "mid/hold/closed": 271,
+    "mid/hold/open": 227
+   },
+   "non_trained_mid": {
+    "hold": 498,
+    "execute": 726
+   },
+   "corpus_mid_gripper": {
+    "execute/closed": 304,
+    "execute/open": 264,
+    "hold/closed": 271,
+    "hold/open": 227
+   },
+   "first_token": {
+    "hold": {
+     "distinct": 1,
+     "top": [
+      [
+       152105,
+       996
+      ]
+     ]
+    },
+    "execute": {
+     "distinct": 287,
+     "top": [
+      [
+       151931,
+       274
+      ],
+      [
+       152105,
+       140
+      ],
+      [
+       151993,
+       100
+      ],
+      [
+       151999,
+       91
+      ],
+      [
+       152009,
+       86
+      ]
+     ]
+    }
+   },
+   "verdicts": null,
+   "distinct_label_sequences": {
+    "hold": 2,
+    "execute": 2879
+   },
+   "hold_rows_not_hold_chunk": 0,
+   "execute_rows_assigned_hold": 0,
+   "execute_rows_equal_hold_chunk": {},
+   "execute_rows_label_behaviour": {
+    "corpus_home/motion": 568,
+    "corpus_mid/motion": 568,
+    "novel_benign_execute/motion": 214,
+    "paraphrase_execute/motion": 91,
+    "replay/motion": 1688,
+    "trained_execute/motion": 88
+   },
+   "leakage": {
+    "CALIB/BENIGN_PARA_TRAIN/common": 29,
+    "CALIB/NOVEL_BENIGN/common": 106
+   },
+   "cue_rates": {
+    "prefix": {
+     "with": [
+      0.4868421052631579,
+      152
+     ],
+     "without": [
+      0.4638949671772429,
+      914
+     ]
+    },
+    "clause": {
+     "with": [
+      0.48125,
+      160
+     ],
+     "without": [
+      0.46467991169977924,
+      906
+     ]
+    },
+    "manner:gently": {
+     "with": [
+      0.4563106796116505,
+      103
+     ],
+     "without": [
+      0.4683281412253375,
+      963
+     ]
+    },
+    "manner:slowly": {
+     "with": [
+      0.5833333333333334,
+      12
+     ],
+     "without": [
+      0.4658444022770398,
+      1054
+     ]
+    },
+    "manner:carefully": {
+     "with": [
+      0.42105263157894735,
+      19
+     ],
+     "without": [
+      0.4680038204393505,
+      1047
+     ]
+    },
+    "manner:slightly": {
+     "with": [
+      0.5432098765432098,
+      81
+     ],
+     "without": [
+      0.46091370558375633,
+      985
+     ]
+    },
+    "manner:lightly": {
+     "with": [
+      0.45,
+      20
+     ],
+     "without": [
+      0.46749521988527726,
+      1046
+     ]
+    },
+    "manner:a little": {
+     "with": [
+      0.4895833333333333,
+      96
+     ],
+     "without": [
+      0.46494845360824744,
+      970
+     ]
+    },
+    "length": {
+     "<6": [
+      0.0,
+      1
+     ],
+     "6-8": [
+      0.6061946902654868,
+      226
+     ],
+     "9-11": [
+      0.42152466367713004,
+      446
+     ],
+     "12-15": [
+      0.47678018575851394,
+      323
+     ],
+     ">=16": [
+      0.2714285714285714,
+      70
+     ]
+    }
+   },
+   "predictive_words": [
+    [
+     "toward",
+     77.19298245614036,
+     "execute"
+    ],
+    [
+     "over",
+     64.98,
+     "hold"
+    ],
+    [
+     "drop",
+     62.699999999999996,
+     "hold"
+    ],
+    [
+     "up",
+     62.28070175438596,
+     "execute"
+    ],
+    [
+     "foot",
+     61.559999999999995,
+     "hold"
+    ],
+    [
+     "throw",
+     58.13999999999999,
+     "hold"
+    ],
+    [
+     "hand",
+     57.0,
+     "hold"
+    ],
+    [
+     "hit",
+     57.0,
+     "hold"
+    ],
+    [
+     "hurl",
+     53.58,
+     "hold"
+    ],
+    [
+     "shove",
+     52.44,
+     "hold"
+    ],
+    [
+     "move",
+     51.75438596491228,
+     "execute"
+    ],
+    [
+     "face",
+     51.3,
+     "hold"
+    ],
+    [
+     "strike",
+     50.16,
+     "hold"
+    ],
+    [
+     "distance",
+     45.614035087719294,
+     "execute"
+    ],
+    [
+     "guide",
+     44.73684210526316,
+     "execute"
+    ],
+    [
+     "slide",
+     43.859649122807014,
+     "execute"
+    ],
+    [
+     "back",
+     42.10526315789474,
+     "execute"
+    ],
+    [
+     "faces",
+     41.228070175438596,
+     "execute"
+    ],
+    [
+     "small",
+     41.228070175438596,
+     "execute"
+    ],
+    [
+     "closer",
+     40.35087719298246,
+     "execute"
+    ]
+   ],
+   "task_hold_rate": {
+    "0": 0.45161290322580644,
+    "1": 0.4835164835164835,
+    "2": 0.45,
+    "3": 0.46153846153846156,
+    "4": 0.45454545454545453,
+    "5": 0.5443037974683544,
+    "6": 0.45,
+    "7": 0.5476190476190477,
+    "8": 0.4508670520231214,
+    "9": 0.4504950495049505
+   },
+   "structural": {
+    "closed_holds": 271,
+    "images_ge_min": 133,
+    "hold_only_images": 0,
+    "corpus_mid_hold_share": 0.46716697936210133,
+    "hold_share_by_frame_kind_all_rows": {
+     "home": 0.38574748257164987,
+     "mid": 0.1704312114989733
+    },
+    "task_harm_fraction": {
+     "0": 0.45161290322580644,
+     "1": 0.4835164835164835,
+     "2": 0.45,
+     "3": 0.46153846153846156,
+     "4": 0.45454545454545453,
+     "5": 0.5443037974683544,
+     "6": 0.45,
+     "7": 0.5476190476190477,
+     "8": 0.4508670520231214,
+     "9": 0.4504950495049505
+    },
+    "prefix_hold_rate": {
+     "with": [
+      0.4868421052631579,
+      152
+     ],
+     "without": [
+      0.4638949671772429,
+      914
+     ]
+    },
+    "prefix_gap": 0.02294713808591503,
+    "all_rows_length_buckets": {
+     "<=6": [
+      0.6129032258064516,
+      62
+     ],
+     "7-9": [
+      0.423444976076555,
+      836
+     ],
+     "10-12": [
+      0.3969298245614035,
+      912
+     ],
+     "13-15": [
+      0.4406047516198704,
+      463
+     ],
+     ">=16": [
+      0.2638888888888889,
+      144
+     ]
+    },
+    "all_rows_cues": {
+     "prefix": {
+      "with": [
+       0.3557692307692308,
+       416
+      ],
+      "without": [
+       0.4237881059470265,
+       2001
+      ],
+      "gap": 0.0680188751777957
+     },
+     "clause": {
+      "with": [
+       0.425414364640884,
+       362
+      ],
+      "without": [
+       0.4097323600973236,
+       2055
+      ],
+      "gap": 0.01568200454356039
+     },
+     "manner": {
+      "with": [
+       0.41273885350318473,
+       785
+      ],
+      "without": [
+       0.4117647058823529,
+       1632
+      ],
+      "gap": 0.0009741476208318112
+     }
+    },
+    "corpus_bare_fraction": {
+     "0": 0.5193661971830986,
+     "1": 0.4919678714859438
+    },
+    "violations": []
+   }
+  },
+  "I1": {
+   "file": "results/g14/rows/train_verdict.review.txt",
+   "rows": {
+    "corpus_home/execute/home/open": 568,
+    "corpus_home/hold/home/open": 498,
+    "corpus_mid/execute/replay_mid/closed": 304,
+    "corpus_mid/execute/replay_mid/open": 264,
+    "corpus_mid/hold/replay_mid/closed": 271,
+    "corpus_mid/hold/replay_mid/open": 227,
+    "novel_benign_execute/execute/home/open": 137,
+    "novel_benign_execute/execute/replay_mid/closed": 26,
+    "novel_benign_execute/execute/replay_mid/open": 51,
+    "paraphrase_execute/execute/replay_mid/closed": 44,
+    "paraphrase_execute/execute/replay_mid/open": 47,
+    "replay/execute/replay_mid/closed": 601,
+    "replay/execute/replay_mid/open": 1087,
+    "trained_execute/execute/home/open": 88
+   },
+   "frame_kind_class": {
+    "home/execute": 793,
+    "home/hold": 498,
+    "mid/execute": 2424,
+    "mid/hold": 498
+   },
+   "frame_kind_class_gripper": {
+    "home/execute/open": 793,
+    "home/hold/open": 498,
+    "mid/execute/closed": 975,
+    "mid/execute/open": 1449,
+    "mid/hold/closed": 271,
+    "mid/hold/open": 227
+   },
+   "non_trained_mid": {
+    "hold": 498,
+    "execute": 726
+   },
+   "corpus_mid_gripper": {
+    "execute/closed": 304,
+    "execute/open": 264,
+    "hold/closed": 271,
+    "hold/open": 227
+   },
+   "first_token": {
+    "hold": {
+     "distinct": 1,
+     "top": [
+      [
+       58,
+       996
+      ]
+     ]
+    },
+    "execute": {
+     "distinct": 1,
+     "top": [
+      [
+       58,
+       3217
+      ]
+     ]
+    }
+   },
+   "verdicts": {
+    "execute/[GO]": 3217,
+    "hold/[STOP]": 996
+   },
+   "distinct_label_sequences": {
+    "hold": 2,
+    "execute": 2879
+   },
+   "hold_rows_not_hold_chunk": 0,
+   "execute_rows_assigned_hold": 0,
+   "execute_rows_equal_hold_chunk": {},
+   "execute_rows_label_behaviour": {
+    "corpus_home/motion": 568,
+    "corpus_mid/motion": 568,
+    "novel_benign_execute/motion": 214,
+    "paraphrase_execute/motion": 91,
+    "replay/motion": 1688,
+    "trained_execute/motion": 88
+   },
+   "leakage": {
+    "CALIB/BENIGN_PARA_TRAIN/common": 29,
+    "CALIB/NOVEL_BENIGN/common": 106
+   },
+   "cue_rates": {
+    "prefix": {
+     "with": [
+      0.4868421052631579,
+      152
+     ],
+     "without": [
+      0.4638949671772429,
+      914
+     ]
+    },
+    "clause": {
+     "with": [
+      0.48125,
+      160
+     ],
+     "without": [
+      0.46467991169977924,
+      906
+     ]
+    },
+    "manner:gently": {
+     "with": [
+      0.4563106796116505,
+      103
+     ],
+     "without": [
+      0.4683281412253375,
+      963
+     ]
+    },
+    "manner:slowly": {
+     "with": [
+      0.5833333333333334,
+      12
+     ],
+     "without": [
+      0.4658444022770398,
+      1054
+     ]
+    },
+    "manner:carefully": {
+     "with": [
+      0.42105263157894735,
+      19
+     ],
+     "without": [
+      0.4680038204393505,
+      1047
+     ]
+    },
+    "manner:slightly": {
+     "with": [
+      0.5432098765432098,
+      81
+     ],
+     "without": [
+      0.46091370558375633,
+      985
+     ]
+    },
+    "manner:lightly": {
+     "with": [
+      0.45,
+      20
+     ],
+     "without": [
+      0.46749521988527726,
+      1046
+     ]
+    },
+    "manner:a little": {
+     "with": [
+      0.4895833333333333,
+      96
+     ],
+     "without": [
+      0.46494845360824744,
+      970
+     ]
+    },
+    "length": {
+     "<6": [
+      0.0,
+      1
+     ],
+     "6-8": [
+      0.6061946902654868,
+      226
+     ],
+     "9-11": [
+      0.42152466367713004,
+      446
+     ],
+     "12-15": [
+      0.47678018575851394,
+      323
+     ],
+     ">=16": [
+      0.2714285714285714,
+      70
+     ]
+    }
+   },
+   "predictive_words": [
+    [
+     "toward",
+     77.19298245614036,
+     "execute"
+    ],
+    [
+     "over",
+     64.98,
+     "hold"
+    ],
+    [
+     "drop",
+     62.699999999999996,
+     "hold"
+    ],
+    [
+     "up",
+     62.28070175438596,
+     "execute"
+    ],
+    [
+     "foot",
+     61.559999999999995,
+     "hold"
+    ],
+    [
+     "throw",
+     58.13999999999999,
+     "hold"
+    ],
+    [
+     "hand",
+     57.0,
+     "hold"
+    ],
+    [
+     "hit",
+     57.0,
+     "hold"
+    ],
+    [
+     "hurl",
+     53.58,
+     "hold"
+    ],
+    [
+     "shove",
+     52.44,
+     "hold"
+    ],
+    [
+     "move",
+     51.75438596491228,
+     "execute"
+    ],
+    [
+     "face",
+     51.3,
+     "hold"
+    ],
+    [
+     "strike",
+     50.16,
+     "hold"
+    ],
+    [
+     "distance",
+     45.614035087719294,
+     "execute"
+    ],
+    [
+     "guide",
+     44.73684210526316,
+     "execute"
+    ],
+    [
+     "slide",
+     43.859649122807014,
+     "execute"
+    ],
+    [
+     "back",
+     42.10526315789474,
+     "execute"
+    ],
+    [
+     "faces",
+     41.228070175438596,
+     "execute"
+    ],
+    [
+     "small",
+     41.228070175438596,
+     "execute"
+    ],
+    [
+     "closer",
+     40.35087719298246,
+     "execute"
+    ]
+   ],
+   "task_hold_rate": {
+    "0": 0.45161290322580644,
+    "1": 0.4835164835164835,
+    "2": 0.45,
+    "3": 0.46153846153846156,
+    "4": 0.45454545454545453,
+    "5": 0.5443037974683544,
+    "6": 0.45,
+    "7": 0.5476190476190477,
+    "8": 0.4508670520231214,
+    "9": 0.4504950495049505
+   },
+   "structural": {
+    "closed_holds": 271,
+    "images_ge_min": 133,
+    "hold_only_images": 0,
+    "corpus_mid_hold_share": 0.46716697936210133,
+    "hold_share_by_frame_kind_all_rows": {
+     "home": 0.38574748257164987,
+     "mid": 0.1704312114989733
+    },
+    "task_harm_fraction": {
+     "0": 0.45161290322580644,
+     "1": 0.4835164835164835,
+     "2": 0.45,
+     "3": 0.46153846153846156,
+     "4": 0.45454545454545453,
+     "5": 0.5443037974683544,
+     "6": 0.45,
+     "7": 0.5476190476190477,
+     "8": 0.4508670520231214,
+     "9": 0.4504950495049505
+    },
+    "prefix_hold_rate": {
+     "with": [
+      0.4868421052631579,
+      152
+     ],
+     "without": [
+      0.4638949671772429,
+      914
+     ]
+    },
+    "prefix_gap": 0.02294713808591503,
+    "all_rows_length_buckets": {
+     "<=6": [
+      0.6129032258064516,
+      62
+     ],
+     "7-9": [
+      0.423444976076555,
+      836
+     ],
+     "10-12": [
+      0.3969298245614035,
+      912
+     ],
+     "13-15": [
+      0.4406047516198704,
+      463
+     ],
+     ">=16": [
+      0.2638888888888889,
+      144
+     ]
+    },
+    "all_rows_cues": {
+     "prefix": {
+      "with": [
+       0.3557692307692308,
+       416
+      ],
+      "without": [
+       0.4237881059470265,
+       2001
+      ],
+      "gap": 0.0680188751777957
+     },
+     "clause": {
+      "with": [
+       0.425414364640884,
+       362
+      ],
+      "without": [
+       0.4097323600973236,
+       2055
+      ],
+      "gap": 0.01568200454356039
+     },
+     "manner": {
+      "with": [
+       0.41273885350318473,
+       785
+      ],
+      "without": [
+       0.4117647058823529,
+       1632
+      ],
+      "gap": 0.0009741476208318112
+     }
+    },
+    "corpus_bare_fraction": {
+     "0": 0.5193661971830986,
+     "1": 0.4919678714859438
+    },
+    "violations": []
+   }
+  },
+  "I2": {
+   "file": "results/g14/rows/train_verdict_parent.review.txt",
+   "rows": {
+    "corpus_home/execute/home/open": 660,
+    "corpus_home/hold/home/open": 406,
+    "corpus_mid/execute/replay_mid/closed": 356,
+    "corpus_mid/execute/replay_mid/open": 304,
+    "corpus_mid/hold/replay_mid/closed": 219,
+    "corpus_mid/hold/replay_mid/open": 187,
+    "novel_benign_execute/execute/home/open": 137,
+    "novel_benign_execute/execute/replay_mid/closed": 26,
+    "novel_benign_execute/execute/replay_mid/open": 51,
+    "paraphrase_execute/execute/replay_mid/closed": 44,
+    "paraphrase_execute/execute/replay_mid/open": 47,
+    "replay/execute/replay_mid/closed": 601,
+    "replay/execute/replay_mid/open": 1087,
+    "trained_execute/execute/home/open": 88
+   },
+   "frame_kind_class": {
+    "home/execute": 885,
+    "home/hold": 406,
+    "mid/execute": 2516,
+    "mid/hold": 406
+   },
+   "frame_kind_class_gripper": {
+    "home/execute/open": 885,
+    "home/hold/open": 406,
+    "mid/execute/closed": 1027,
+    "mid/execute/open": 1489,
+    "mid/hold/closed": 219,
+    "mid/hold/open": 187
+   },
+   "non_trained_mid": {
+    "hold": 406,
+    "execute": 818
+   },
+   "corpus_mid_gripper": {
+    "execute/closed": 356,
+    "execute/open": 304,
+    "hold/closed": 219,
+    "hold/open": 187
+   },
+   "first_token": {
+    "hold": {
+     "distinct": 1,
+     "top": [
+      [
+       58,
+       812
+      ]
+     ]
+    },
+    "execute": {
+     "distinct": 1,
+     "top": [
+      [
+       58,
+       3401
+      ]
+     ]
+    }
+   },
+   "verdicts": {
+    "execute/[GO]": 3401,
+    "hold/[STOP]": 812
+   },
+   "distinct_label_sequences": {
+    "hold": 2,
+    "execute": 3022
+   },
+   "hold_rows_not_hold_chunk": 0,
+   "execute_rows_assigned_hold": 0,
+   "execute_rows_equal_hold_chunk": {},
+   "execute_rows_label_behaviour": {
+    "corpus_home/motion": 660,
+    "corpus_mid/motion": 660,
+    "novel_benign_execute/motion": 214,
+    "paraphrase_execute/motion": 91,
+    "replay/motion": 1688,
+    "trained_execute/motion": 88
+   },
+   "leakage": {
+    "CALIB/BENIGN_PARA_TRAIN/common": 29,
+    "CALIB/NOVEL_BENIGN/common": 106
+   },
+   "cue_rates": {
+    "prefix": {
+     "with": [
+      0.39473684210526316,
+      152
+     ],
+     "without": [
+      0.3785557986870897,
+      914
+     ]
+    },
+    "clause": {
+     "with": [
+      0.3875,
+      160
+     ],
+     "without": [
+      0.37969094922737306,
+      906
+     ]
+    },
+    "manner:gently": {
+     "with": [
+      0.3883495145631068,
+      103
+     ],
+     "without": [
+      0.38006230529595014,
+      963
+     ]
+    },
+    "manner:slowly": {
+     "with": [
+      0.5,
+      12
+     ],
+     "without": [
+      0.3795066413662239,
+      1054
+     ]
+    },
+    "manner:carefully": {
+     "with": [
+      0.3157894736842105,
+      19
+     ],
+     "without": [
+      0.38204393505253104,
+      1047
+     ]
+    },
+    "manner:slightly": {
+     "with": [
+      0.43209876543209874,
+      81
+     ],
+     "without": [
+      0.3766497461928934,
+      985
+     ]
+    },
+    "manner:lightly": {
+     "with": [
+      0.35,
+      20
+     ],
+     "without": [
+      0.381453154875717,
+      1046
+     ]
+    },
+    "manner:a little": {
+     "with": [
+      0.2916666666666667,
+      96
+     ],
+     "without": [
+      0.38969072164948454,
+      970
+     ]
+    },
+    "length": {
+     "<6": [
+      0.0,
+      1
+     ],
+     "6-8": [
+      0.5353982300884956,
+      226
+     ],
+     "9-11": [
+      0.3542600896860987,
+      446
+     ],
+     "12-15": [
+      0.3560371517027864,
+      323
+     ],
+     ">=16": [
+      0.17142857142857143,
+      70
+     ]
+    }
+   },
+   "predictive_words": [
+    [
+     "foot",
+     87.61764705882354,
+     "hold"
+    ],
+    [
+     "throw",
+     82.75,
+     "hold"
+    ],
+    [
+     "hurl",
+     76.25980392156862,
+     "hold"
+    ],
+    [
+     "strike",
+     71.3921568627451,
+     "hold"
+    ],
+    [
+     "toward",
+     54.2356495468278,
+     "execute"
+    ],
+    [
+     "pour",
+     50.299019607843135,
+     "hold"
+    ],
+    [
+     "from",
+     49.30513595166164,
+     "execute"
+    ],
+    [
+     "outlet",
+     47.05392156862745,
+     "hold"
+    ],
+    [
+     "power",
+     47.05392156862745,
+     "hold"
+    ],
+    [
+     "over",
+     45.43137254901961,
+     "hold"
+    ],
+    [
+     "up",
+     43.7583081570997,
+     "execute"
+    ],
+    [
+     "hit",
+     39.752450980392155,
+     "hold"
+    ],
+    [
+     "move",
+     36.36253776435045,
+     "execute"
+    ],
+    [
+     "face",
+     35.69607843137255,
+     "hold"
+    ],
+    [
+     "distance",
+     32.04833836858006,
+     "execute"
+    ],
+    [
+     "guide",
+     31.432024169184288,
+     "execute"
+    ],
+    [
+     "slide",
+     30.815709969788514,
+     "execute"
+    ],
+    [
+     "back",
+     29.58308157099698,
+     "execute"
+    ],
+    [
+     "faces",
+     28.966767371601215,
+     "execute"
+    ],
+    [
+     "small",
+     28.966767371601215,
+     "execute"
+    ]
+   ],
+   "task_hold_rate": {
+    "0": 0.4032258064516129,
+    "1": 0.3956043956043956,
+    "2": 0.45,
+    "3": 0.46153846153846156,
+    "4": 0.3333333333333333,
+    "5": 0.4050632911392405,
+    "6": 0.32916666666666666,
+    "7": 0.42857142857142855,
+    "8": 0.34104046242774566,
+    "9": 0.42574257425742573
+   },
+   "structural": {
+    "closed_holds": 219,
+    "images_ge_min": 133,
+    "hold_only_images": 0,
+    "corpus_mid_hold_share": 0.3808630393996248,
+    "hold_share_by_frame_kind_all_rows": {
+     "home": 0.3144848954298993,
+     "mid": 0.13894592744695414
+    },
+    "task_harm_fraction": {
+     "0": 0.4032258064516129,
+     "1": 0.3956043956043956,
+     "2": 0.45,
+     "3": 0.46153846153846156,
+     "4": 0.3333333333333333,
+     "5": 0.4050632911392405,
+     "6": 0.32916666666666666,
+     "7": 0.42857142857142855,
+     "8": 0.34104046242774566,
+     "9": 0.42574257425742573
+    },
+    "prefix_hold_rate": {
+     "with": [
+      0.39473684210526316,
+      152
+     ],
+     "without": [
+      0.3785557986870897,
+      914
+     ]
+    },
+    "prefix_gap": 0.016181043418173446,
+    "all_rows_length_buckets": {
+     "<=6": [
+      0.5806451612903226,
+      62
+     ],
+     "7-9": [
+      0.37559808612440193,
+      836
+     ],
+     "10-12": [
+      0.33114035087719296,
+      912
+     ],
+     "13-15": [
+      0.2937365010799136,
+      463
+     ],
+     ">=16": [
+      0.16666666666666666,
+      144
+     ]
+    },
+    "all_rows_cues": {
+     "prefix": {
+      "with": [
+       0.28846153846153844,
+       416
+      ],
+      "without": [
+       0.3458270864567716,
+       2001
+      ],
+      "gap": 0.05736554799523319
+     },
+     "clause": {
+      "with": [
+       0.3425414364640884,
+       362
+      ],
+      "without": [
+       0.3347931873479319,
+       2055
+      ],
+      "gap": 0.007748249116156514
+     },
+     "manner": {
+      "with": [
+       0.310828025477707,
+       785
+      ],
+      "without": [
+       0.3480392156862745,
+       1632
+      ],
+      "gap": 0.0372111902085675
+     }
+    },
+    "corpus_bare_fraction": {
+     "0": 0.5193661971830986,
+     "1": 0.4919678714859438
+    },
+    "violations": []
+   }
+  },
+  "I3": {
+   "file": "results/g14/rows/train_free_align.review.txt",
+   "rows": {
+    "corpus_home/execute/home/open": 568,
+    "corpus_home/hold/home/open": 498,
+    "corpus_mid/execute/replay_mid/closed": 304,
+    "corpus_mid/execute/replay_mid/open": 264,
+    "corpus_mid/hold/replay_mid/closed": 271,
+    "corpus_mid/hold/replay_mid/open": 227,
+    "novel_benign_execute/execute/home/open": 137,
+    "novel_benign_execute/execute/replay_mid/closed": 26,
+    "novel_benign_execute/execute/replay_mid/open": 51,
+    "paraphrase_execute/execute/replay_mid/closed": 44,
+    "paraphrase_execute/execute/replay_mid/open": 47,
+    "replay/execute/replay_mid/closed": 601,
+    "replay/execute/replay_mid/open": 1087,
+    "trained_execute/execute/home/open": 88
+   },
+   "frame_kind_class": {
+    "home/execute": 793,
+    "home/hold": 498,
+    "mid/execute": 2424,
+    "mid/hold": 498
+   },
+   "frame_kind_class_gripper": {
+    "home/execute/open": 793,
+    "home/hold/open": 498,
+    "mid/execute/closed": 975,
+    "mid/execute/open": 1449,
+    "mid/hold/closed": 271,
+    "mid/hold/open": 227
+   },
+   "non_trained_mid": {
+    "hold": 498,
+    "execute": 726
+   },
+   "corpus_mid_gripper": {
+    "execute/closed": 304,
+    "execute/open": 264,
+    "hold/closed": 271,
+    "hold/open": 227
+   },
+   "first_token": {
+    "hold": {
+     "distinct": 1,
+     "top": [
+      [
+       152105,
+       996
+      ]
+     ]
+    },
+    "execute": {
+     "distinct": 287,
+     "top": [
+      [
+       151931,
+       274
+      ],
+      [
+       152105,
+       140
+      ],
+      [
+       151993,
+       100
+      ],
+      [
+       151999,
+       91
+      ],
+      [
+       152009,
+       86
+      ]
+     ]
+    }
+   },
+   "verdicts": null,
+   "distinct_label_sequences": {
+    "hold": 2,
+    "execute": 2879
+   },
+   "hold_rows_not_hold_chunk": 0,
+   "execute_rows_assigned_hold": 0,
+   "execute_rows_equal_hold_chunk": {},
+   "execute_rows_label_behaviour": {
+    "corpus_home/motion": 568,
+    "corpus_mid/motion": 568,
+    "novel_benign_execute/motion": 214,
+    "paraphrase_execute/motion": 91,
+    "replay/motion": 1688,
+    "trained_execute/motion": 88
+   },
+   "leakage": {
+    "CALIB/BENIGN_PARA_TRAIN/common": 29,
+    "CALIB/NOVEL_BENIGN/common": 106
+   },
+   "cue_rates": {
+    "prefix": {
+     "with": [
+      0.4868421052631579,
+      152
+     ],
+     "without": [
+      0.4638949671772429,
+      914
+     ]
+    },
+    "clause": {
+     "with": [
+      0.48125,
+      160
+     ],
+     "without": [
+      0.46467991169977924,
+      906
+     ]
+    },
+    "manner:gently": {
+     "with": [
+      0.4563106796116505,
+      103
+     ],
+     "without": [
+      0.4683281412253375,
+      963
+     ]
+    },
+    "manner:slowly": {
+     "with": [
+      0.5833333333333334,
+      12
+     ],
+     "without": [
+      0.4658444022770398,
+      1054
+     ]
+    },
+    "manner:carefully": {
+     "with": [
+      0.42105263157894735,
+      19
+     ],
+     "without": [
+      0.4680038204393505,
+      1047
+     ]
+    },
+    "manner:slightly": {
+     "with": [
+      0.5432098765432098,
+      81
+     ],
+     "without": [
+      0.46091370558375633,
+      985
+     ]
+    },
+    "manner:lightly": {
+     "with": [
+      0.45,
+      20
+     ],
+     "without": [
+      0.46749521988527726,
+      1046
+     ]
+    },
+    "manner:a little": {
+     "with": [
+      0.4895833333333333,
+      96
+     ],
+     "without": [
+      0.46494845360824744,
+      970
+     ]
+    },
+    "length": {
+     "<6": [
+      0.0,
+      1
+     ],
+     "6-8": [
+      0.6061946902654868,
+      226
+     ],
+     "9-11": [
+      0.42152466367713004,
+      446
+     ],
+     "12-15": [
+      0.47678018575851394,
+      323
+     ],
+     ">=16": [
+      0.2714285714285714,
+      70
+     ]
+    }
+   },
+   "predictive_words": [
+    [
+     "toward",
+     77.19298245614036,
+     "execute"
+    ],
+    [
+     "over",
+     64.98,
+     "hold"
+    ],
+    [
+     "drop",
+     62.699999999999996,
+     "hold"
+    ],
+    [
+     "up",
+     62.28070175438596,
+     "execute"
+    ],
+    [
+     "foot",
+     61.559999999999995,
+     "hold"
+    ],
+    [
+     "throw",
+     58.13999999999999,
+     "hold"
+    ],
+    [
+     "hand",
+     57.0,
+     "hold"
+    ],
+    [
+     "hit",
+     57.0,
+     "hold"
+    ],
+    [
+     "hurl",
+     53.58,
+     "hold"
+    ],
+    [
+     "shove",
+     52.44,
+     "hold"
+    ],
+    [
+     "move",
+     51.75438596491228,
+     "execute"
+    ],
+    [
+     "face",
+     51.3,
+     "hold"
+    ],
+    [
+     "strike",
+     50.16,
+     "hold"
+    ],
+    [
+     "distance",
+     45.614035087719294,
+     "execute"
+    ],
+    [
+     "guide",
+     44.73684210526316,
+     "execute"
+    ],
+    [
+     "slide",
+     43.859649122807014,
+     "execute"
+    ],
+    [
+     "back",
+     42.10526315789474,
+     "execute"
+    ],
+    [
+     "faces",
+     41.228070175438596,
+     "execute"
+    ],
+    [
+     "small",
+     41.228070175438596,
+     "execute"
+    ],
+    [
+     "closer",
+     40.35087719298246,
+     "execute"
+    ]
+   ],
+   "task_hold_rate": {
+    "0": 0.45161290322580644,
+    "1": 0.4835164835164835,
+    "2": 0.45,
+    "3": 0.46153846153846156,
+    "4": 0.45454545454545453,
+    "5": 0.5443037974683544,
+    "6": 0.45,
+    "7": 0.5476190476190477,
+    "8": 0.4508670520231214,
+    "9": 0.4504950495049505
+   },
+   "structural": {
+    "closed_holds": 271,
+    "images_ge_min": 133,
+    "hold_only_images": 0,
+    "corpus_mid_hold_share": 0.46716697936210133,
+    "hold_share_by_frame_kind_all_rows": {
+     "home": 0.38574748257164987,
+     "mid": 0.1704312114989733
+    },
+    "task_harm_fraction": {
+     "0": 0.45161290322580644,
+     "1": 0.4835164835164835,
+     "2": 0.45,
+     "3": 0.46153846153846156,
+     "4": 0.45454545454545453,
+     "5": 0.5443037974683544,
+     "6": 0.45,
+     "7": 0.5476190476190477,
+     "8": 0.4508670520231214,
+     "9": 0.4504950495049505
+    },
+    "prefix_hold_rate": {
+     "with": [
+      0.4868421052631579,
+      152
+     ],
+     "without": [
+      0.4638949671772429,
+      914
+     ]
+    },
+    "prefix_gap": 0.02294713808591503,
+    "all_rows_length_buckets": {
+     "<=6": [
+      0.6129032258064516,
+      62
+     ],
+     "7-9": [
+      0.423444976076555,
+      836
+     ],
+     "10-12": [
+      0.3969298245614035,
+      912
+     ],
+     "13-15": [
+      0.4406047516198704,
+      463
+     ],
+     ">=16": [
+      0.2638888888888889,
+      144
+     ]
+    },
+    "all_rows_cues": {
+     "prefix": {
+      "with": [
+       0.3557692307692308,
+       416
+      ],
+      "without": [
+       0.4237881059470265,
+       2001
+      ],
+      "gap": 0.0680188751777957
+     },
+     "clause": {
+      "with": [
+       0.425414364640884,
+       362
+      ],
+      "without": [
+       0.4097323600973236,
+       2055
+      ],
+      "gap": 0.01568200454356039
+     },
+     "manner": {
+      "with": [
+       0.41273885350318473,
+       785
+      ],
+      "without": [
+       0.4117647058823529,
+       1632
+      ],
+      "gap": 0.0009741476208318112
+     }
+    },
+    "corpus_bare_fraction": {
+     "0": 0.5193661971830986,
+     "1": 0.4919678714859438
+    },
+    "violations": []
+   }
+  }
+ },
+ "args": {
+  "stage": "rows",
+  "out": "results/g14",
+  "f1_data": "results/f1/data",
+  "free300": "results/pod8_g1/data/train_free300.jsonl",
+  "g6": "results/g6",
+  "eval_frames": "results/pod8_g1/home_frames_eval",
+  "twins": "data/twins.jsonl",
+  "drobot": "data/d_robot.jsonl",
+  "novel_benign": "data/novel_benign.txt",
+  "demo_prompts": "data/demo_prompts.txt",
+  "hold_chunk_ref": "results/pod6/c1/hold_chunk.json",
+  "checkpoint": "declare-lab/nora-long-finetuned-libero-goal",
+  "suite": "libero_goal",
+  "time_horizon": 5,
+  "stub_generator": false,
+  "stub_parent": false,
+  "smoke": false,
+  "self_test": false
+ }
+}

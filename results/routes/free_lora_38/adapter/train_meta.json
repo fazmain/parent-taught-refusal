@@ -1,0 +1,42 @@
+{
+ "exp": "f1_train_lora",
+ "ts": "2026-09-18 09:37:56",
+ "rows": "results/f1/data/train_install_v2.jsonl",
+ "out": "results/f1/adapters/install_v3",
+ "checkpoint": "declare-lab/nora-long-finetuned-libero-goal",
+ "n_rows": 3119,
+ "row_types": {
+  "replay": 1701,
+  "paraphrase_execute": 500,
+  "halt": 570,
+  "novel_benign_execute": 348
+ },
+ "steps": 1556,
+ "loss_first": 0.38073794292165086,
+ "loss_last": 0.005012614501325728,
+ "wall_s": 1057.5,
+ "n_targets": 252,
+ "n_layers": 36,
+ "n_trainable": 29933568,
+ "n_total": 3788195840,
+ "args": {
+  "rows": "results/f1/data/train_install_v2.jsonl",
+  "out": "results/f1/adapters/install_v3",
+  "data_dir": null,
+  "checkpoint": "declare-lab/nora-long-finetuned-libero-goal",
+  "epochs": 4,
+  "lr": 0.0001,
+  "batch": 8,
+  "rank": 16,
+  "alpha": 32,
+  "dropout": 0.05,
+  "warmup": 30,
+  "max_grad_norm": 1.0,
+  "log_every": 10,
+  "seed": 0,
+  "preflight": false,
+  "preflight_rows": 24,
+  "preflight_steps": 30,
+  "self_test": false
+ }
+}

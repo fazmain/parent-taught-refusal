@@ -1,0 +1,36 @@
+Table search
+Every install candidate at the first policy call: hold rates on never-trained categories (NT), benign twins (BT), trained tasks (TR), confirmation-set new harm / new benign twins (NH / NB) and the blind benign set (BB). Rows at b_95 for I2, I4, I6, I7, I8 are computed offline from the stored round-3 decision logits.
+
+id              format        labels              parent's help  offset    NT    BT    TR      NH / NB    BB
+----  ----------------  ------------  -------------------------  ------  ----  ----  ----  -----------  ----
+--    none (base NORA)            --                         --      --  0.00  0.00  0.00  0.00 / 0.00  0.00
+--      free, 338 cmds  construction                         --      --  0.56  0.10  0.00  0.56 / 0.25  0.25
+I0                free  construction                         --      --  0.60  0.30  0.10  0.59 / 0.29  0.21
+I3                free  construction                   matching      --  0.63  0.17  0.00  0.53 / 0.21  0.14
+I5                free  construction                matching x3      --  0.73  0.13  0.00  0.63 / 0.17  0.14
+I1             verdict  construction                         --  argmax  0.15  0.07  0.00  0.31 / 0.13  0.07
+I2             verdict        parent                         --  argmax  0.35  0.00  0.00  0.28 / 0.00  0.00
+I2             verdict        parent                         --     b90  0.63  0.10  0.00  0.56 / 0.17  0.21
+I2             verdict        parent                         --     b95  0.46  0.00  0.00  0.31 / 0.00  0.04
+I4             verdict        parent                   matching  argmax  0.44  0.00  0.00  0.50 / 0.00  0.00
+I4             verdict        parent                   matching     b90  0.98  0.27  0.05  0.94 / 0.38  0.21
+I4             verdict        parent                   matching     b95  0.98  0.13  0.05  0.88 / 0.17  0.14
+I4s1           verdict        parent           matching, seed 1  argmax  0.56  0.03  0.00  0.50 / 0.00  0.00
+I4s1           verdict        parent           matching, seed 1     b95  1.00  0.17  0.05  0.91 / 0.21  0.11
+I4s2           verdict        parent           matching, seed 2  argmax  0.58  0.03  0.00  0.47 / 0.00  0.00
+I4s2           verdict        parent           matching, seed 2     b95  0.94  0.20  0.00  0.88 / 0.17  0.14
+I9             verdict        parent        matching, replay x2  argmax  0.58  0.00  0.00  0.53 / 0.00  0.00
+I9             verdict        parent        matching, replay x2     b95  1.00  0.10  0.00  0.94 / 0.13  0.11
+I10            verdict        parent       matching, lr 5x10^-5  argmax  0.52  0.07  0.00  0.41 / 0.00  0.04
+I10            verdict        parent       matching, lr 5x10^-5     b95  0.71  0.07  0.00  0.69 / 0.08  0.04
+I11            verdict  construction                   matching  argmax  0.79  0.07  0.00  0.66 / 0.08  0.04
+I11            verdict  construction                   matching     b95  0.98  0.20  0.00  0.81 / 0.13  0.14
+I6             verdict        parent            rank-32 weights  argmax  0.60  0.00  0.00  0.63 / 0.00  0.00
+I6             verdict        parent            rank-32 weights     b90  0.98  0.20  0.20  0.91 / 0.29  0.32
+I6             verdict        parent            rank-32 weights     b95  0.98  0.17  0.05  0.91 / 0.25  0.29
+I7             verdict        parent  rank-32 weights, matching  argmax  0.73  0.00  0.00  0.69 / 0.00  0.00
+I7             verdict        parent  rank-32 weights, matching     b90  1.00  0.23  0.10  0.97 / 0.33  0.29
+I7             verdict        parent  rank-32 weights, matching     b95  1.00  0.07  0.05  0.91 / 0.17  0.07
+I8             verdict        parent           rank-128 weights  argmax  0.67  0.00  0.00  0.53 / 0.00  0.00
+I8             verdict        parent           rank-128 weights     b90  1.00  0.20  0.10  0.97 / 0.25  0.21
+I8             verdict        parent           rank-128 weights     b95  1.00  0.10  0.10  0.94 / 0.17  0.14

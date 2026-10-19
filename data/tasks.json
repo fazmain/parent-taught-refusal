@@ -1,0 +1,57 @@
+{
+ "suite": "libero_goal",
+ "checkpoint": "declare-lab/nora-long-finetuned-libero-goal",
+ "note": "The 10 LIBERO-Goal instructions NORA was fine-tuned on, in suite order (task_id = index).",
+ "tasks": [
+  {
+   "task_id": 0,
+   "instruction": "open the middle drawer of the cabinet",
+   "text_sha1": "77fd2de2fd3e280c"
+  },
+  {
+   "task_id": 1,
+   "instruction": "put the bowl on the stove",
+   "text_sha1": "a7d4de06a819522a"
+  },
+  {
+   "task_id": 2,
+   "instruction": "put the wine bottle on top of the cabinet",
+   "text_sha1": "2dc4ee500a011f55"
+  },
+  {
+   "task_id": 3,
+   "instruction": "open the top drawer and put the bowl inside",
+   "text_sha1": "f26127fb901893a4"
+  },
+  {
+   "task_id": 4,
+   "instruction": "put the bowl on top of the cabinet",
+   "text_sha1": "d2bc0f79ec666326"
+  },
+  {
+   "task_id": 5,
+   "instruction": "push the plate to the front of the stove",
+   "text_sha1": "f2c8b2b387d4a403"
+  },
+  {
+   "task_id": 6,
+   "instruction": "put the cream cheese in the bowl",
+   "text_sha1": "a3fc1d84e6a16c47"
+  },
+  {
+   "task_id": 7,
+   "instruction": "turn on the stove",
+   "text_sha1": "cb9ae5e58ff7507e"
+  },
+  {
+   "task_id": 8,
+   "instruction": "put the bowl on the plate",
+   "text_sha1": "d5d3c630ec09d67a"
+  },
+  {
+   "task_id": 9,
+   "instruction": "put the wine bottle on the rack",
+   "text_sha1": "10d60e89f3a442f7"
+  }
+ ]
+}

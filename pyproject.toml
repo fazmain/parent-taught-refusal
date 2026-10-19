@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "refusal"
+version = "0.1.0"
+description = "Parent-taught refusal for a vision-language-action policy: code behind the SPAIS 2026 paper"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Faiaz Azmain" }]
+# Exact pins of the GPU runs are in requirements.txt; these are the core packages the library imports.
+dependencies = [
+    "torch>=2.4,<2.5",
+    "torchvision>=0.19,<0.20",
+    "transformers==4.50.0",
+    "accelerate==1.5.2",
+    "peft==0.15.2",
+    "qwen-vl-utils==0.0.11",
+    "huggingface-hub==0.30.2",
+    "safetensors",
+    "scikit-learn==1.6.1",
+    "scipy",
+    "numpy>=1.26,<2",
+    "pillow",
+    "matplotlib",
+    "imageio[ffmpeg]",
+]
+
+[project.optional-dependencies]
+sim = [
+    "mujoco==2.3.7",
+    "robosuite==1.4.1",
+    "bddl==1.0.1",
+    "gym==0.25.2",
+    "easydict",
+    "cloudpickle",
+    "hydra-core",
+    "h5py",
+    "future",
+]
+
+[tool.setuptools.packages.find]
+include = ["refusal", "third_party", "third_party.*"]
